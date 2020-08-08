@@ -104,6 +104,9 @@ function App() {
 
         </div>
         <div>
+          <div>
+            <h4 className="catogeries__header">Next Video</h4>
+          </div>
           <VideoList videos={sidebarVideos} />
         </div>
 

@@ -20,12 +20,3 @@ class CommentsInfo extends React.Component {
 }
 
 export default CommentsInfo;
-
-//=============================================//
-{
-  /* <img
-            className="Mohead__img"
-            src={this.props.formData.image}
-            alt="Images"
-          /> */
-}

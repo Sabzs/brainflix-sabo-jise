@@ -1,4 +1,3 @@
-// import React from "react";
 import React, { Component } from "react";
 import ViewIcon from "../assets/icons/svg/icon-views.svg";
 import LikesIcon from "../assets/icons/svg/icon-likes.svg";

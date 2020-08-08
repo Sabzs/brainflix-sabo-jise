@@ -20,12 +20,3 @@ class Header extends React.Component {
 }
 
 export default Header;
-
-//================================
-// <nav>
-//   <a href="./">Home</a>
-//   {' | '}
-//   <a href="./">About</a>
-//   {' | '}
-//   <a href="./">Contact</a>
-// </nav>
