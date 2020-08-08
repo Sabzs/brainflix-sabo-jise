@@ -4,8 +4,8 @@ class CommentsInfo extends React.Component {
   render() {
     return (
       <div>
-        <div className="Mohead">
-          <div className="Mohead-img">circle</div>
+        <div className="circleDiv">
+          <div className="greyCircle"></div>
         </div>
         <div className="userComments">
           <div className="nameDate">

@@ -1,11 +1,11 @@
 @import "./partials/variables";
 @import "./partials/mixins";
+@import "./partials/fonts";
 @import "./partials/utils";
 @import "./partials/global";
 @import "./partials/header";
 @import "./partials/hero";
-@import "./partials/article";
-@import "./partials/form-items";
-@import "./partials/aside";
-@import "./partials/footer";
+@import "./partials/mainContent";
+@import "./partials/formInputs";
+@import "./partials/commentsItems";
 @import "./partials/video-list";

@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 import Header from './components/header';
 import Hero from './components/hero';
 import MainContent from './components/MainContent';
-import Article from './components/article';
 import Comments from './components/formComments/commentsList';
 import VideoList from './components/VideoList/VideoList'
 import './style/app.css';
@@ -87,25 +86,21 @@ function App() {
   ];
 
 
-
-
   return (
-    <div className="App">
+    <div className="App" >
       <Header />
       <Hero />
       <main>
         <div>
           <MainContent />
-          <Article />
           <form action="">
             <InputText />
             <Comments commentsInfo={commentsData} />
           </form>
-
         </div>
         <div>
           <div>
-            <h4 className="catogeries__header">Next Video</h4>
+            <h4 className="videoList__header">Next Video</h4>
           </div>
           <VideoList videos={sidebarVideos} />
         </div>

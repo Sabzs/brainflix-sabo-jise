@@ -1,0 +1,19 @@
+@import "./variables";
+
+@include mobile {
+  .circleDiv {
+    @include flex-justify(center);
+    width: 3rem;
+    margin-top: 1.5rem;
+    margin-right: 1.25rem;
+    border: 1px solid crimson;
+  }
+  .greyCircle {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: $color-mercury;
+    border: 1px solid green;
+  }
+}

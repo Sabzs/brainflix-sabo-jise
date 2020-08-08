@@ -5,15 +5,32 @@ import Images from "../assets/images/Mohan-muruge.jpg";
 class Header extends React.Component {
   render() {
     return (
-      <header>
-        <img src={Logo} alt="brainflix logo" />
-        <form>
-          <input type="search" placeholder="search" />
-          <button type="upload">UPLOAD</button>
-          <div className="Mohead">
-            <img className="Mohead-Img" src={Images} alt="Muhan Muruge Icon" />
+      <header className="header">
+        <img className="header__logo" src={Logo} alt="brainflix logo" />
+        <div className="header__searchUpload">
+          <div className="header__searchDiv">
+            <input
+              className="header__searchInput"
+              type="search"
+              placeholder="search"
+            />
           </div>
-        </form>
+          <div className="header__btn-mohead">
+            <div className="header__btnDiv">
+              <button className="header__btn" type="upload">
+                UPLOAD
+              </button>
+            </div>
+
+            <div className="header__mohead">
+              <img
+                className="header__mohead-img"
+                src={Images}
+                alt="Muhan Muruge Icon"
+              />
+            </div>
+          </div>
+        </div>
       </header>
     );
   }

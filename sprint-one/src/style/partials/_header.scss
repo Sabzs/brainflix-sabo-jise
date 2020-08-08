@@ -1,25 +1,56 @@
-.header {
-  @extend .container;
-}
+// .header {
+//   @extend .container;
+// }
 
 //=====================settings from my previous----header {
-header {
+.header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 0 50px;
+  &__logo {
+    display: flex;
+  }
+  &__searchUpload {
+    display: flex;
+    flex-direction: column;
+  }
+  &__searchDiv {
+    display: flex;
+  }
+  &__searchInput {
+    display: flex;
+  }
+  &__btn-mohead {
+    display: flex;
+  }
+  &__btnDiv {
+    display: flex;
+  }
+  &__btn {
+    display: flex;
+  }
+  &__mohead {
+    display: flex;
+    margin-right: 1.25rem;
+  }
+  &__mohead-img {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 }
 
-form {
-  display: flex;
-}
-.Mohead {
-  margin-right: 1.25rem;
-}
-.Mohead-Img {
-  display: flex;
-  width: 3rem;
-  height: 3rem;
-  object-fit: cover;
-  border-radius: 50%;
-}
+// form {
+//   display: flex;
+// }
+// .Mohead {
+
+// }
+// .Mohead-Img {
+//   display: flex;
+
+// }
