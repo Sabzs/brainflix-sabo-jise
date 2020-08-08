@@ -1,0 +1,45 @@
+// .video-list {
+//   // todo add css
+//   width: 150px;
+//   height: 70px;
+//   &__image {
+//     // todo add css
+//     width: 120px;
+//     height: 70px;
+//   }
+// }
+
+//=============================================//
+
+// .post {
+//   padding: 0 25px;
+//   width: 75%;
+// }
+
+.categories {
+  width: 25%;
+  &__header {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &__list {
+    list-style-type: none;
+    padding: 0;
+  }
+  &__imgDiv {
+    width: 120px;
+    height: 70px;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+  &__video-info {
+    width: 150px;
+    height: 70px;
+  }
+  // &__title {
+  // }
+  // &__channel {
+  // }
+}
