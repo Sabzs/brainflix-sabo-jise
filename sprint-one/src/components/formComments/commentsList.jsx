@@ -2,12 +2,16 @@ import React from "react";
 import FormItems from "./commentsItems";
 
 function Comments(props) {
-  console.log("Form props", props.commentsInfo);
-
   return (
-    <div className="form-items">
+    <div>
       {props.commentsInfo.map((comment) => (
-        <FormItems key={comment.id} formData={comment} />
+        <FormItems
+          key={comment.id}
+          id={comment.id}
+          name={comment.name}
+          description={comment.description}
+          timestamp={comment.timestamp}
+        />
       ))}
     </div>
   );
