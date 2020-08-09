@@ -1,56 +1,99 @@
-// .header {
-//   @extend .container;
-// }
-
-//=====================settings from my previous----header {
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 50px;
-  &__logo {
-    display: flex;
+  @include mobile {
+    @include flex-justifyDirection(center, column);
+    width: 100%;
+    height: 10.5625rem;
+    &__logoDiv {
+      @include flex-justify(center);
+      height: 3rem;
+    }
+    &__logo {
+      display: flex;
+    }
+    &__searchUpload {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    &__searchDiv {
+      display: flex;
+      width: 100%;
+    }
+    &__searchInput {
+      display: flex;
+      @include fonts(0.75rem, 1.25rem, none);
+      padding-left: 1rem;
+      width: 100%;
+      height: 3rem;
+      border-radius: 0.25rem;
+      border: none;
+      border: 1px solid $color-silver;
+    }
+    &__upload-mohead {
+      display: flex;
+      width: 100%;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    &__btnDiv {
+      display: flex;
+      width: 80%;
+      margin-right: 1rem;
+    }
+    &__btn {
+      @include flex-justifyAlign(center, center);
+      @include fonts(0.75rem, 1.25rem, bold);
+      width: 100%;
+      height: 3rem;
+      border-radius: 0.25rem;
+      border: none;
+      color: $color-white;
+      background-color: $secondary-color;
+    }
+    &__moheadDiv {
+      display: flex;
+      margin-right: 1.25rem;
+      margin: 0;
+    }
+    &__mohead-img {
+      display: flex;
+      width: 3rem;
+      height: 3rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
   }
-  &__searchUpload {
-    display: flex;
-    flex-direction: column;
+  @include tablet {
+    @include flex-justifyDirection(center, row);
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    &__searchUpload {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 10.5625rem;
+      width: 100%;
+    }
+    &__upload-mohead {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      margin: 0px 0px 0px 1.5rem;
+    }
+    &__btnDiv {
+      display: flex;
+      width: 80%;
+      margin-right: 1.5rem;
+    }
   }
-  &__searchDiv {
-    display: flex;
-  }
-  &__searchInput {
-    display: flex;
-  }
-  &__btn-mohead {
-    display: flex;
-  }
-  &__btnDiv {
-    display: flex;
-  }
-  &__btn {
-    display: flex;
-  }
-  &__mohead {
-    display: flex;
-    margin-right: 1.25rem;
-  }
-  &__mohead-img {
-    display: flex;
-    width: 3rem;
-    height: 3rem;
-    object-fit: cover;
-    border-radius: 50%;
+  @include desktop {
+    &__searchUpload {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 31.8125rem;
+      width: 100%;
+    }
   }
 }
-
-// form {
-//   display: flex;
-// }
-// .Mohead {
-
-// }
-// .Mohead-Img {
-//   display: flex;
-
-// }

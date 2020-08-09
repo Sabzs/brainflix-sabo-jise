@@ -1,15 +1,17 @@
-* {
-  box-sizing: border-box;
-}
-
-// body {
-//   margin: 0;
+// * {
+//   box-sizing: border-box;
 // }
 
-.hero {
+// // body {
+// //   margin: 0;
+// // }
+
+.currentVideo {
+  // @include mobile {
   position: relative;
   max-width: 1080px;
-  margin: 0 auto;
+  margin: 0;
+  background-color: $primary-color;
   &__video {
     max-width: 100%;
     object-fit: cover;
@@ -72,4 +74,5 @@
   &__progress-text {
     text-align: center;
   }
+  // }
 }

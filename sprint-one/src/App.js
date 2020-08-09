@@ -2,15 +2,12 @@
 import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Header from './components/header';
-import Hero from './components/hero';
+import HeroVideo from './components/HeroVideo';
 import MainContent from './components/MainContent';
 import Comments from './components/formComments/commentsList';
 import VideoList from './components/VideoList/VideoList'
 import './style/app.css';
 import FormInputs from './components/formInputs';
-
-
-
 
 
 
@@ -105,27 +102,23 @@ class App extends Component {
     this.setState({
       commentsData: [...this.state.commentsData, { id, name, description, timestamp }]
     });
-
     event.target.reset();
   };
-
-
-
 
 
   render() {
     return (
       <div className="App" >
         <Header />
-        <Hero />
+        <HeroVideo />
         <main>
           <div>
             <MainContent />
-            <form  >
+            <div  >
               {/* <InputText /> */}
               <FormInputs handleSubmitMessage={this.handleSubmitMessage} />
               <Comments commentsInfo={this.state.commentsData} />
-            </form>
+            </div>
           </div>
           <div>
             <div>

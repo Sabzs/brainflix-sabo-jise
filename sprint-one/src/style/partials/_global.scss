@@ -27,3 +27,36 @@ body {
   scroll-behavior: smooth;
   width: 100%;
 }
+
+.header {
+  @include mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  // @include tablet {
+  //   padding-left: 1rem;
+  //   padding-right: 1rem;
+  // }
+
+  @include desktop {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  // }
+
+  // @include mobile {
+  //   padding-left: 1rem;
+  //   padding-right: 1rem;
+  // }
+
+  // @include mobile {
+  //     padding-left: 1rem;
+  //   padding-right: 1rem;
+  // }
+
+  // @include mobile {
+  //     padding-left: 1rem;
+  //   padding-right: 1rem;
+  // }
+}

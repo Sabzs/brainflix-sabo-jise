@@ -6,23 +6,26 @@ class Header extends React.Component {
   render() {
     return (
       <header className="header">
-        <img className="header__logo" src={Logo} alt="brainflix logo" />
+        <div className="header__logoDiv">
+          <img className="header__logo" src={Logo} alt="brainflix logo" />
+        </div>
+
         <div className="header__searchUpload">
           <div className="header__searchDiv">
             <input
               className="header__searchInput"
               type="search"
-              placeholder="search"
+              placeholder="Search"
             />
           </div>
-          <div className="header__btn-mohead">
+          <div className="header__upload-mohead">
             <div className="header__btnDiv">
               <button className="header__btn" type="upload">
                 UPLOAD
               </button>
             </div>
 
-            <div className="header__mohead">
+            <div className="header__moheadDiv">
               <img
                 className="header__mohead-img"
                 src={Images}
