@@ -17,7 +17,11 @@ export default class NextVideo extends Component {
 
         <div className="currentVideo__controls">
           <div className="currentVideo__play">
-            <img className="hero__icon" src={playIcon} alt="Play Icons" />
+            <img
+              className="currentVideo__icon"
+              src={playIcon}
+              alt="Play Icons"
+            />
           </div>
 
           <div className="currentVideo__progress-bar">
@@ -28,7 +32,7 @@ export default class NextVideo extends Component {
                 alt="scrubber control"
               />
             </div>
-            <div className="currentVideo__progress-text">0:00 / 0:42</div>
+            <div className="currentVideo__progress-text">0:00 / 0:47</div>
           </div>
 
           <div className="currentVideo__icon-group">

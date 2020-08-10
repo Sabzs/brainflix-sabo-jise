@@ -33,30 +33,36 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-
-  // @include tablet {
-  //   padding-left: 1rem;
-  //   padding-right: 1rem;
-  // }
-
   @include desktop {
     padding-left: 8rem;
     padding-right: 8rem;
   }
-  // }
-
-  // @include mobile {
-  //   padding-left: 1rem;
-  //   padding-right: 1rem;
-  // }
-
-  // @include mobile {
-  //     padding-left: 1rem;
-  //   padding-right: 1rem;
-  // }
-
-  // @include mobile {
-  //     padding-left: 1rem;
-  //   padding-right: 1rem;
-  // }
+}
+.currentVideo {
+  @include mobile {
+    &__controls {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  @include tablet {
+    &__video {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    &__controls {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  @include desktop {
+    &__video {
+      padding-left: 12.5rem;
+      padding-right: 12.5rem;
+    }
+    &__controls {
+      padding-left: 13.5rem;
+      padding-right: 13.5rem;
+    }
+  }
 }
