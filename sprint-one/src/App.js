@@ -112,10 +112,9 @@ class App extends Component {
         <Header />
         <HeroVideo />
         <main>
-          <div>
+          <div className="formDiv">
             <MainContent />
             <div  >
-              {/* <InputText /> */}
               <FormInputs handleSubmitMessage={this.handleSubmitMessage} />
               <Comments commentsInfo={this.state.commentsData} />
             </div>
@@ -135,6 +134,3 @@ class App extends Component {
 
 
 export default App;
-
-//=======================================================================//
-//=======================================================================//

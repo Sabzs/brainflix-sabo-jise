@@ -66,3 +66,33 @@ body {
     }
   }
 }
+.mainContent {
+  @include mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+main {
+  @include desktop {
+    display: flex;
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+//applies to the desktop section//
+.formDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  @include mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  // @include desktop {
+  //   padding-left: 8rem;
+  //   padding-right: 8rem;
+  // }
+}

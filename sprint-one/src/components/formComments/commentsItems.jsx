@@ -4,16 +4,16 @@ function CommentsInfo({ id, name, description, timestamp }) {
   const formattedTime = new Date(timestamp).toLocaleDateString();
 
   return (
-    <div id={id}>
-      <div className="circleDiv">
-        <div className="greyCircle"></div>
+    <div className="comments" id={id}>
+      <div className="comments__circleDiv">
+        <div className="comments__greyCircle"></div>
       </div>
-      <div className="userComments">
-        <div className="nameDate">
-          <p className="userName">{name}</p>
-          <p className="userTime">{formattedTime}</p>
+      <div className="comments__userComments">
+        <div className="comments__nameDate">
+          <p className="comments__userName">{name}</p>
+          <p className="comments__userDate">{formattedTime}</p>
         </div>
-        <div className="userText">{description}</div>
+        <div className="comments__userText">{description}</div>
       </div>
     </div>
   );
