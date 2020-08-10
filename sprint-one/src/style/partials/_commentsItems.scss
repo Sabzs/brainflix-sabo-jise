@@ -65,22 +65,7 @@
   @include desktop {
     width: 80%;
     &__userComments {
-      // width: 100%;
       padding-right: 0;
     }
-    // &__nameDate {
-    //   display: flex;
-    //   justify-content: flex-start;
-    // }
-    // &__userName {
-    //   padding-right: 1rem;
-    //   @include fonts(0.875rem, 1.375rem, bold);
-    // }
-    // &__userDate {
-    //   @include fonts(0.875rem, 1.375rem, none);
-    // }
-    // &__userText {
-    //   @include fonts(0.875rem, 1.375rem, none);
-    // }
   }
 }

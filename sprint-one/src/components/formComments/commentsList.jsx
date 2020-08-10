@@ -2,9 +2,6 @@ import React from "react";
 import FormItems from "./commentsItems";
 
 function Comments(props) {
-  // commentsInfor.sort = (a, b) => {
-  //         return b.timestamp - a.timestamp;
-  //     })
   return (
     <div>
       {props.commentsInfo.map((comment) => (

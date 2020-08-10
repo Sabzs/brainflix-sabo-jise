@@ -82,8 +82,11 @@ main {
 
 //applies to the desktop section//
 .formDiv {
-  display: flex;
-  flex-direction: column;
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
 }
 
 .form {
@@ -91,8 +94,4 @@ main {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  // @include desktop {
-  //   padding-left: 8rem;
-  //   padding-right: 8rem;
-  // }
 }

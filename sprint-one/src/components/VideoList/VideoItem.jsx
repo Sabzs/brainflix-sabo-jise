@@ -2,18 +2,18 @@ import React from "react";
 
 function VideoItem(props) {
   return (
-    <div className="categories">
-      <div className="categories__list">
-        <div className="categories__imgDiv">
+    <div className="video-list__videolist">
+      <div className="video-list__list">
+        <div className="video-list__imgDiv">
           <img
-            className="categories__img"
+            className="video-list__img"
             src={props.videoData.image}
             alt="Images"
           />
         </div>
-        <div className="categories__video-info">
-          <p className="categories__title">{props.videoData.title}</p>
-          <p className="categories__channel">{props.videoData.channel}</p>
+        <div className="video-list__video-info">
+          <p className="video-list__title">{props.videoData.title}</p>
+          <p className="video-list__channel">{props.videoData.channel}</p>
         </div>
       </div>
     </div>

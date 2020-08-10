@@ -120,8 +120,8 @@ class App extends Component {
             </div>
           </div>
           <div>
-            <div>
-              <h4 className="videoList__header">Next Video</h4>
+            <div className="video-list__headerDiv">
+              <h4 className="video-list__header">Next Video</h4>
             </div>
             <VideoList videos={sidebarVideos} />
           </div>
