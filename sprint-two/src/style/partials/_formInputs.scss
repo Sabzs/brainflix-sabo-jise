@@ -1,0 +1,112 @@
+.form {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    &__threeComments {
+      @include fonts(0.875rem, 1.375rem, bold);
+    }
+    &__mohead-inputDiv {
+      display: flex;
+      margin-top: 2rem;
+      width: 100%;
+    }
+    &__mohead {
+      padding-top: 1rem;
+      margin-right: 1rem;
+    }
+    &__mohead-img {
+      display: flex;
+      width: 3rem;
+      height: 3rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    &__textarea-btnDiv {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    &__label {
+      display: flex;
+      @include fonts(0.875rem, 1.375rem, none);
+      color: $color-silver;
+    }
+    &__input {
+      display: none;
+    }
+    &__textareaDiv {
+      display: flex;
+      border: 1px solid $secondary-color;
+      border-radius: 0.25rem;
+      width: 100%;
+    }
+    &__textarea {
+      display: flex;
+      width: 100%;
+    }
+    &__btnDiv {
+      display: flex;
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    &__btn {
+      @include flex-justifyAlign(center, center);
+      @include fonts(0.75rem, 1.25rem, bold);
+      width: 100%;
+      height: 3rem;
+      border-radius: 0.25rem;
+      border: none;
+      color: $color-white;
+      background-color: $secondary-color;
+    }
+  }
+  @include tablet {
+    &__threeComments {
+      @include fonts(1rem, 1.5rem, bold);
+    }
+    &__mohead-inputDiv {
+      display: flex;
+      margin-top: 2rem;
+      padding-right: 2.5rem;
+      padding-bottom: 1.5rem;
+      align-items: center;
+      width: 100%;
+    }
+    &__mohead {
+      margin-right: 2.5rem;
+    }
+    &__textarea-btnDiv {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+    }
+    &__conver-textarea {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+    }
+    &__textareaDiv {
+      display: flex;
+      border: 1px solid $secondary-color;
+      border-radius: 0.25rem;
+      width: 100%;
+    }
+    &__textarea {
+      display: flex;
+      height: 3rem;
+      width: 100%;
+    }
+    &__btnDiv {
+      display: flex;
+      align-items: center;
+      width: 40%;
+      padding-top: 1.3rem;
+      padding-left: 1rem;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
