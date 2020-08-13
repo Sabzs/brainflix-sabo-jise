@@ -1,7 +1,7 @@
-// import React from 'react';
 import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Header from './components/header';
+import UploadPage from "./components/Routes/UploadPage";
 import HeroVideo from './components/HeroVideo';
 import MainContent from './components/MainContent';
 import Comments from './components/formComments/commentsList';
@@ -10,7 +10,7 @@ import './style/app.css';
 import FormInputs from './components/formInputs';
 
 
-
+//add state and setState to video items//
 const sidebarVideos = [
   {
     id: uuidv4(),
@@ -107,7 +107,12 @@ class Home extends Component {
   render() {
     return (
       <div className="App" >
-        <Header />
+        <Header>
+          <div className="videoUpload">
+            <UploadPage />
+          </div>
+
+        </Header>
         <HeroVideo />
         <main>
           <div className="formDiv">
@@ -129,6 +134,5 @@ class Home extends Component {
     );
   }
 }
-
 
 export default Home;

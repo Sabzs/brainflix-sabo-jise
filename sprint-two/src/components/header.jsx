@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/logo/logo-brainflix.svg";
 import Images from "../assets/images/Mohan-muruge.jpg";
 
@@ -7,7 +8,9 @@ class Header extends React.Component {
     return (
       <header className="header">
         <div className="header__logoDiv">
-          <img className="header__logo" src={Logo} alt="brainflix logo" />
+          <Link to="/Home">
+            <img className="header__logo" src={Logo} alt="brainflix logo" />
+          </Link>
         </div>
 
         <div className="header__searchUpload">
@@ -20,9 +23,11 @@ class Header extends React.Component {
           </div>
           <div className="header__upload-mohead">
             <div className="header__btnDiv">
-              <button className="header__btn" type="upload">
-                UPLOAD
-              </button>
+              <Link to="/uploadpage">
+                <button className="header__btn" type="upload">
+                  UPLOAD
+                </button>
+              </Link>
             </div>
 
             <div className="header__moheadDiv">
