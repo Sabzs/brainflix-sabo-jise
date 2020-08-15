@@ -9,143 +9,20 @@
 // import FormInputs from "./components/formInputs";
 // import UploadPage from "./components/Routes/UploadPage";
 
-// //add state and setState to video items//
-// const sidebarVideos = [
-//   {
-//     id: uuidv4(),
-//     title: "Become A Travel Pro In One Easy Lesson",
-//     channel: "Bernice Lambert",
-//     image: "/images/video-list-1.jpg",
-//   },
-//   {
-//     id: uuidv4(),
-//     title: "Les Houches The Hidden Gem Of The Chamonix",
-//     channel: "Bernard Patrick",
-//     image: "/images/video-list-2.jpg",
-//   },
-//   {
-//     id: uuidv4(),
-//     title: "  Travel Health Useful Medical Information For",
-//     channel: "Lizzie Burton",
-//     image: "/images/video-list-3.jpg",
-//   },
-//   {
-//     id: uuidv4(),
-//     title: " Cheap Airline Tickets Great Ways To Save",
-//     channel: "Emily Harper",
-//     image: "/images/video-list-4.jpg",
-//   },
-//   {
-//     id: uuidv4(),
-//     title: "Take A Romantic Break In A Boutique Hotel",
-//     channel: "Ethan Owen",
-//     image: "/images/video-list-5.jpg",
-//   },
-//   {
-//     id: uuidv4(),
-//     title: "Choose The Perfect Accommodations",
-//     channel: "Lydia Perez",
-//     image: "/images/video-list-6.jpg",
-//   },
-//   {
-//     id: uuidv4(),
-//     title: "Cruising Destination Ideas",
-//     channel: "Timothy Austin",
-//     image: "/images/video-list-7.jpg",
-//   },
-//   {
-//     id: uuidv4(),
-//     title: "Train Travel On Track For Safety",
-//     channel: "Scotty Cranmer",
-//     image: "/images/video-list-8.jpg",
-//   },
-// ];
-
-// class Home extends Component {
-//   state = {
-//     commentsData: [
-//       {
-//         name: "Michael Lyons",
-//         timestamp: "2018/11/18",
-//         description:
-//           "They BLEW the ROOF off at their last show, once everyone started figuring out they were going.This is still simply the greatest opening of a concert I have EVER witnessed.",
-//         id: uuidv4(),
-//       },
-
-//       {
-//         name: "Gary Wong",
-//         timestamp: "2018/11/11",
-//         description:
-//           "Every time I see him shred I feel so motivated to get off my couch and hop on my board.He’s so talented! I wish I can ride like him one day so I can really enjoy myself!",
-//         id: uuidv4(),
-//       },
-//       {
-//         name: "Theodore Duncan",
-//         timestamp: "2018/10/15",
-//         description:
-//           "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!",
-//         id: uuidv4(),
-//       },
-//     ],
-//   };
-
-//   handleSubmitMessage = (event) => {
-//     event.preventDefault();
-
-//     const id = uuidv4();
-//     const name = event.target.name.value;
-//     const description = event.target.message.value;
-//     const timestamp = Date.now();
-
-//     this.setState({
-//       commentsData: [
-//         ...this.state.commentsData,
-//         { id, name, description, timestamp },
-//       ],
-//     });
-//     event.target.reset();
-//   };
-
-//   render() {
-//     return (
-//       <div className="App">
-//         <Header>
-//           <div>
-//             <UploadPage />
-//           </div>
-//         </Header>
-//         <HeroVideo />
-//         <main>
-//           <div className="formDiv">
-//             <MainContent />
-//             <div>
-//               <FormInputs handleSubmitMessage={this.handleSubmitMessage} />
-//               <Comments commentsInfo={this.state.commentsData} />
-//             </div>
-//           </div>
-//           <div>
-//             <div className="video-list__headerDiv">
-//               <h4 className="video-list__header">Next Video</h4>
-//             </div>
-//             <VideoList videos={sidebarVideos} />
-//           </div>
-//         </main>
-//       </div>
-//     );
-//   }
-// }
-
-// export default Home;
-
 //=================================================================================================//
 //=================================================================================================//
 import React, { Component } from "react";
 import HeroVideo from "./components/HeroVideo";
 import FormInputs from "./components/formInputs";
+import Header from "./components/header";
+// import { v4 as uuidv4 } from "uuid";
+// import UploadPage from "./components/Routes/UploadPage";
 // import VideoList from "./components/VideoList";
 import MainContent from "./components/MainContent";
 import axios from "axios";
 import VideoItem from "./components/VideoList/VideoItems";
+import "./style/app.css";
+
 //==============================//
 class Home extends Component {
   state = {
@@ -171,7 +48,7 @@ class Home extends Component {
             `https://project-2-api.herokuapp.com/videos/1af0jruup5gu/?api_key=618161be-ffd6-4ab6-98bd-78e453c5f0e9`
           )
           .then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             this.setState({ mainVideo: response.data });
           });
       });
@@ -179,10 +56,9 @@ class Home extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     // console.log(prevState);
-    console.log(this.props);
+    // console.log(this.props);
 
     if (
-      // this.props.match.params !== undefined &&
       this.props.match.params.id !== undefined &&
       this.props.match.params.id !== prevState.mainVideo.id
     ) {
@@ -192,7 +68,7 @@ class Home extends Component {
           `https://project-2-api.herokuapp.com/videos/${id}?api_key=618161be-ffd6-4ab6-98bd-78e453c5f0e9`
         )
         .then((response) => {
-          console.log(response.data);
+          // console.log(response.data);
           this.setState({
             mainVideo: response.data,
             videoId: response.data.id,
@@ -204,14 +80,15 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <HeroVideo heroVideo={this.state.mainVideo} />
-
+        <Header />
         <div>
+          <HeroVideo heroVideo={this.state.mainVideo} />
           <div>
             <MainContent mainContent={this.state.mainVideo} />
-            <FormInputs comments={this.state.mainVideo} />
+            <FormInputs className="formDiv" comments={this.state.mainVideo} />
           </div>
           <VideoItem
+            className="videoItems"
             nextVideo={this.state.sidebarVideos}
             mainVideo={this.state.mainVideo}
           />
@@ -222,3 +99,33 @@ class Home extends Component {
 }
 
 export default Home;
+
+//=========================================//
+
+// render() {
+//   return (
+//     <div className="App">
+//       <Header>
+//         <div>
+//           <UploadPage />
+//         </div>
+//       </Header>
+//       <HeroVideo />
+//       <main>
+//         <div className="formDiv">
+//           <MainContent />
+//           <div>
+//             <FormInputs handleSubmitMessage={this.handleSubmitMessage} />
+//             <Comments commentsInfo={this.state.commentsData} />
+//           </div>
+//         </div>
+//         <div>
+//           <div className="video-list__headerDiv">
+//             <h4 className="video-list__header">Next Video</h4>
+//           </div>
+//           <VideoList videos={sidebarVideos} />
+//         </div>
+//       </main>
+//     </div>
+//   );
+// }
