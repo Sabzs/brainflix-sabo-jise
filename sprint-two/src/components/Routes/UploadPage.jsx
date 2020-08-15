@@ -2,40 +2,37 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo/logo-brainflix.png";
 import Images from "../../assets/images/Mohan-muruge.jpg";
+// import VideoPreview from "../../assets/images/video-preview.jpg";
 
 class UploadPage extends React.Component {
   render() {
     return (
-      <div>
-        <header className="videoUpload__headerDiv">
-          <div className="videoUpload__logoDiv">
+      <div className="upload">
+        <header className="upload__headerDiv">
+          <div className="upload__logoDiv">
             <Link to="/">
-              <img
-                className="videoUpload__logo"
-                src={Logo}
-                alt="brainflix logo"
-              />
+              <img className="upload__logo" src={Logo} alt="brainflix logo" />
             </Link>
           </div>
 
-          <div className="videoUpload__searchUpload">
-            <div className="videoUpload__searchDiv">
+          <div className="upload__searchUpload">
+            <div className="upload__searchDiv">
               <input
-                className="videoUpload__searchInput"
+                className="upload__searchInput"
                 type="search"
                 placeholder="Search"
               />
             </div>
-            <div className="videoUpload__upload-mohead">
-              <div className="videoUpload__btnDiv">
-                <button className="videoUpload__btn" type="upload">
+            <div className="upload__upload-mohead">
+              <div className="upload__btnDiv">
+                <button className="upload__btn" type="upload">
                   UPLOAD
                 </button>
               </div>
 
-              <div className="videoUpload__moheadDiv">
+              <div className="upload__moheadDiv">
                 <img
-                  className="videoUpload__mohead-img"
+                  className="upload__mohead-img"
                   src={Images}
                   alt="Muhan Muruge Icon"
                 />
@@ -43,37 +40,36 @@ class UploadPage extends React.Component {
             </div>
           </div>
         </header>{" "}
-        <form
-          className="videoUpload__uploadFormDiv"
-          // onSubmit={handleSubmitMessage}
-        >
-          <h3 className="videoUpload__threeComments">3 Comments</h3>{" "}
-          <div className="videoUpload__mohead-inputDiv">
+        <form className="upload__formDiv">
+          <h3 className="upload__upload-header">Upload Video</h3>{" "}
+          {/* <div className="upload__previewDiv">
+            <img
+              className="upload__previewImg"
+              src={VideoPreview}
+              alt="video preview"
+            />
+          </div> */}
+          <div className="upload__mohead-inputDiv">
             {" "}
-            <div className="videoUpload__mohead">
-              {" "}
-              <img
-                className="videoUpload__mohead-img"
-                src={Images}
-                alt="Muhan Muruge Icon"
-              />
-            </div>
-            <div className="videoUpload__textarea-btnDiv">
-              <div className="videoUpload__conver-textarea">
-                <div className="videoUpload__lable-inputDiv">
-                  <label className="videoUpload__label" htmlFor="name">
-                    JOIN THE CONVERSATION
+            <div className="upload__textarea-btnDiv">
+              <div className="upload__conver-textarea">
+                <div className="upload__lable-inputDiv">
+                  <label className="upload__label" htmlFor="name">
+                    VIDEO THUMBNAIL
                   </label>
                   <input
-                    className="videoUpload__input"
+                    className="upload__input"
                     type="text"
                     name="name"
                     placeholder="name"
                   />
                 </div>
-                <div className="videoUpload__textareaDiv">
+                <label className="upload__label" htmlFor="name">
+                  ADD A VIDEO DESCRITION
+                </label>
+                <div className="upload__textareaDiv">
                   <textarea
-                    className="videoUpload__textarea"
+                    className="upload__textarea"
                     name="message"
                     cols="30"
                     rows="5"
@@ -81,10 +77,13 @@ class UploadPage extends React.Component {
                   ></textarea>
                 </div>
               </div>
-              <div className="videoUpload__btnDiv">
-                <button className="videoUpload__btn" type="submit">
+              <div className="upload__btnDiv">
+                <Link to={"/"} className="upload__button-cancel">
+                  CANCEL
+                </Link>
+                <button className="upload__btn" type="submit">
                   {" "}
-                  COMMENT
+                  PUBLISH
                 </button>
               </div>
             </div>

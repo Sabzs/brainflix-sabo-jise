@@ -49,6 +49,10 @@ h6 {
   margin-bottom: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   font-size: 16px;
   font-family: "Linotype";
@@ -318,34 +322,11 @@ body {
 }
 
 @media (min-width: 320px) {
-  .videoUpload {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
-    height: 10.5625rem;
+  .upload {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  .videoUpload__logoDiv {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .videoUpload__logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .videoUpload__searchUpload {
+  .upload__headerDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -353,15 +334,42 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    border-bottom: 1px solid #afafaf;
+  }
+  .upload__logoDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 3rem;
+  }
+  .upload__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .upload__searchUpload {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
   }
-  .videoUpload__searchDiv {
+  .upload__searchDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 100%;
   }
-  .videoUpload__searchInput {
+  .upload__searchInput {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -375,7 +383,7 @@ body {
     border: none;
     border: 1px solid #afafaf;
   }
-  .videoUpload__upload-mohead {
+  .upload__upload-mohead {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -383,14 +391,14 @@ body {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
   }
-  .videoUpload__btnDiv {
+  .upload__btnDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 80%;
     margin-right: 1rem;
   }
-  .videoUpload__btn {
+  .upload__btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -410,14 +418,14 @@ body {
     color: #ffffff;
     background-color: #0095ff;
   }
-  .videoUpload__moheadDiv {
+  .upload__moheadDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-right: 1.25rem;
     margin: 0;
   }
-  .videoUpload__mohead-img {
+  .upload__mohead-img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -430,13 +438,14 @@ body {
 }
 
 @media (min-width: 768px) {
-  .videoUpload {
+  .upload {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .upload__headerDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -444,10 +453,10 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 100%;
-    height: 5rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
-  .videoUpload__searchUpload {
+  .upload__searchUpload {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -461,27 +470,25 @@ body {
     margin-left: 10.5625rem;
     width: 100%;
   }
-  .videoUpload__upload-mohead {
+  .upload__upload-mohead {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0px 0px 0px 1.5rem;
-  }
-  .videoUpload__btnDiv {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 80%;
-    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: 1440px) {
-  .videoUpload__searchUpload {
+  .upload {
+    padding-left: 12.5rem;
+    padding-right: 12.5rem;
+  }
+  .upload__searchUpload {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -497,8 +504,12 @@ body {
   }
 }
 
+.upload__formDiv {
+  border: 1px solid red;
+}
+
 @media (min-width: 320px) {
-  .videoUpload .uploadFormDiv {
+  .upload__formDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -508,33 +519,37 @@ body {
             flex-direction: column;
     width: 100%;
   }
-  .videoUpload .uploadFormDiv__formDiv .videoUpload .uploadFormDiv__threeComments {
+  .upload__formDiv__upload-header {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: bold;
   }
-  .videoUpload .uploadFormDiv__mohead-inputDiv {
+  .upload__formDiv__previewDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 18rem;
+    height: 9.5625rem;
+    border: 1px dashed lime;
+  }
+  .upload__formDiv__previewImg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 0.25rem;
+  }
+  .upload__formDiv__mohead-inputDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-top: 2rem;
     width: 100%;
   }
-  .videoUpload .uploadFormDiv__mohead {
-    padding-top: 1rem;
-    margin-right: 1rem;
-  }
-  .videoUpload .uploadFormDiv__mohead-img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 3rem;
-    height: 3rem;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 50%;
-  }
-  .videoUpload .uploadFormDiv__textarea-btnDiv {
+  .upload__formDiv__textarea-btnDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -543,8 +558,9 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
+    border: 1px solid red;
   }
-  .videoUpload .uploadFormDiv__label {
+  .upload__formDiv__label {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -553,12 +569,12 @@ body {
     font-weight: none;
     color: #afafaf;
   }
-  .videoUpload .uploadFormDiv__input {
+  .upload__formDiv__input {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .videoUpload .uploadFormDiv__textareaDiv {
+  .upload__formDiv__textareaDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -566,13 +582,13 @@ body {
     border-radius: 0.25rem;
     width: 100%;
   }
-  .videoUpload .uploadFormDiv__textarea {
+  .upload__formDiv__textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 100%;
   }
-  .videoUpload .uploadFormDiv__btnDiv {
+  .upload__formDiv__btnDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -580,7 +596,7 @@ body {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
   }
-  .videoUpload .uploadFormDiv__btn {
+  .upload__formDiv__btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -603,12 +619,12 @@ body {
 }
 
 @media (min-width: 768px) {
-  .videoUpload .uploadFormDiv__threeComments {
+  .upload__formDiv__threeComments {
     font-size: 1rem;
     line-height: 1.5rem;
     font-weight: bold;
   }
-  .videoUpload .uploadFormDiv__mohead-inputDiv {
+  .upload__formDiv__mohead-inputDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -620,10 +636,10 @@ body {
             align-items: center;
     width: 100%;
   }
-  .videoUpload .uploadFormDiv__mohead {
+  .upload__formDiv__mohead {
     margin-right: 2.5rem;
   }
-  .videoUpload .uploadFormDiv__textarea-btnDiv {
+  .upload__formDiv__textarea-btnDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -636,7 +652,7 @@ body {
             align-items: center;
     width: 100%;
   }
-  .videoUpload .uploadFormDiv__conver-textarea {
+  .upload__formDiv__conver-textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -646,7 +662,7 @@ body {
             flex-direction: column;
     width: 80%;
   }
-  .videoUpload .uploadFormDiv__textareaDiv {
+  .upload__formDiv__textareaDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -654,14 +670,14 @@ body {
     border-radius: 0.25rem;
     width: 100%;
   }
-  .videoUpload .uploadFormDiv__textarea {
+  .upload__formDiv__textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     height: 3rem;
     width: 100%;
   }
-  .videoUpload .uploadFormDiv__btnDiv {
+  .upload__formDiv__btnDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
