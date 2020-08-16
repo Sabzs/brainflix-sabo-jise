@@ -24,7 +24,9 @@ function MainContent(props) {
           <div className="mainContent__socials">
             <div className="mainContent__iconsDiv mainContent__iconsDiv--pdright-tab">
               <img className="mainContent__icons" src={Views} alt="" />
-              {props.mainContent && props.mainContent.views}
+              <p className="mainContent__icon-count">
+                {props.mainContent && props.mainContent.views}
+              </p>
             </div>
             <div className="mainContent__iconsDiv mainContent__iconsDiv--pdright-desk">
               <img
@@ -32,7 +34,9 @@ function MainContent(props) {
                 src={Likes}
                 alt="Likes Icon"
               />
-              {props.mainContent && props.mainContent.likes}
+              <p className="mainContent__icon-count">
+                {props.mainContent && props.mainContent.likes}
+              </p>
             </div>
           </div>
         </div>

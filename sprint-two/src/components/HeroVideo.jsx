@@ -1,77 +1,47 @@
-// import React, { Component } from "react";
 import React from "react";
-// import CurrentVideo from "../assets/images/video-list-0.jpg";
 import playIcon from "../assets/icons/svg/icon-play.svg";
 import Scrubber from "../assets/icons/svg/icon-scrubber-control.svg";
 import fullscreenIcon from "../assets/icons/svg/icon-fullscreen.svg";
 import volumeIcon from "../assets/icons/svg/icon-volume.svg";
 
 function NextVideo(props) {
-  //  class NextVideo extends Component {
-  //   render() {
   return (
-    <section className="currentVideo">
-      {/* <img
-          className="currentVideo__video"
-          src={CurrentVideo}
-          alt="Hero Video"
-        /> */}
+    <section className="heroVideo">
       {/* <div className="header"> */}
       <video
-        className="currentVideo__video"
+        className="heroVideo__video"
         poster={props.heroVideo.image && props.heroVideo.image}
         // controls
       ></video>
       {/* </div> */}
 
-      <div className="currentVideo__controls">
-        <div className="currentVideo__play">
-          <img className="currentVideo__icon" src={playIcon} alt="Play Icons" />
+      <div className="heroVideo__controls">
+        <div className="heroVideo__play">
+          <img className="heroVideo__icon" src={playIcon} alt="Play Icons" />
         </div>
 
-        <div className="currentVideo__progress-bar">
-          <div className="currentVideo__progress-timeline">
+        <div className="heroVideo__progress-bar">
+          <div className="heroVideo__progress-timeline">
             <img
-              className="currentVideo__progress-scrubber"
+              className="heroVideo__progress-scrubber"
               src={Scrubber}
               alt="scrubber control"
             />
           </div>
-          <div className="currentVideo__progress-text">0:00 / 0:47</div>
+          <div className="heroVideo__progress-text">0:00 / 0:47</div>
         </div>
 
-        <div className="currentVideo__icon-group">
+        <div className="heroVideo__icon-group">
           <img
-            className="currentVideo__icon"
+            className="heroVideo__icon"
             src={fullscreenIcon}
             alt="Expand Icon"
           />
-          <img
-            className="currentVideo__icon"
-            src={volumeIcon}
-            alt="Volume Icon"
-          />
+          <img className="heroVideo__icon" src={volumeIcon} alt="Volume Icon" />
         </div>
       </div>
     </section>
   );
 }
-// }
-export default NextVideo;
-//================================================================//
-//================================================================//
-// class NextVideo extends Component {
-//   render() {
-//     return (
-//       <div className="header">
-//         <video
-//           className="heroImg"
-//           poster={this.props.heroVideo.image && this.props.heroVideo.image}
-//           // controls
-//         ></video>
-//       </div>
-//     );
-//   }
-// }
 
-//
+export default NextVideo;

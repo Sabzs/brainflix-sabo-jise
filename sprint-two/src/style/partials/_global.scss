@@ -21,6 +21,9 @@ h6 {
   margin-top: 0;
   margin-bottom: 0;
 }
+p {
+  text-decoration: none;
+}
 img {
   max-width: 100%;
 }
@@ -41,7 +44,7 @@ body {
     padding-right: 8rem;
   }
 }
-.currentVideo {
+.heroVideo {
   @include mobile {
     &__controls {
       padding-left: 1rem;
@@ -69,19 +72,6 @@ body {
     }
   }
 }
-.mainContent {
-  @include mobile {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-main {
-  @include desktop {
-    display: flex;
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-}
 
 .formDiv {
   @include desktop {
@@ -91,9 +81,19 @@ main {
   }
 }
 
-.form {
+.main-container {
   @include mobile {
+    display: flex;
+    flex-direction: column;
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+  @include desktop {
+    display: flex;
+    padding-left: 8rem;
+    padding-right: 8rem;
+
+    // padding-left: 12.5rem;
+    // padding-right: 12.5rem;
   }
 }

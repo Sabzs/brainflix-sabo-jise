@@ -10,8 +10,7 @@ import NotFound from './components/Routes/NotFound';
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      {/* <Nav /> */}
-      <Switch>
+      <Switch >
         <Redirect from="/home" to="/" />
         <Route path="/" exact component={Home} />
         <Route path="/video/:id" component={Home} />
