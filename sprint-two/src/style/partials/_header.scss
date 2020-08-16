@@ -7,12 +7,7 @@
       @include flex-justify(center);
       height: 3rem;
     }
-    // &__logoDiv a {
-    //   display: flex;
-    //   justify-items: center;
-    //   // align-items: center;
-    //   width: 100%;
-    // }
+
     &__logo {
       display: flex;
     }
@@ -117,6 +112,10 @@
     }
   }
   @include desktop {
+    &__logoDiv a {
+      // @include flex-justify(center);
+      height: 3rem;
+    }
     &__searchUpload {
       display: flex;
       flex-direction: row;

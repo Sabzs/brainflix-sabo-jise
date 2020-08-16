@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/logo/logo-brainflix.png";
+import Logo from "../../assets/logo/logo-brainflix.svg";
 import Images from "../../assets/images/Mohan-muruge.jpg";
-// import VideoPreview from "../../assets/images/video-preview.jpg";
+import VideoPreview from "../../assets/images/video-preview.jpg";
 
 class UploadPage extends React.Component {
   render() {
@@ -26,7 +26,7 @@ class UploadPage extends React.Component {
             <div className="upload__upload-mohead">
               <div className="upload__btnDiv">
                 <button className="upload__btn" type="upload">
-                  UPLOAD
+                  <p>UPLOAD </p>
                 </button>
               </div>
 
@@ -40,58 +40,58 @@ class UploadPage extends React.Component {
             </div>
           </div>
         </header>{" "}
-        <form className="upload__formDiv">
-          <h3 className="upload__upload-header">Upload Video</h3>{" "}
-          {/* <div className="upload__previewDiv">
+        <form className="form">
+          <h3 className="form__upload-header">Upload Video</h3>{" "}
+          <div className="form__previewDiv">
+            <label className="form__label" htmlFor="name">
+              VIDEO THUMBNAIL
+            </label>
             <img
-              className="upload__previewImg"
+              className="form__previewImg"
               src={VideoPreview}
               alt="video preview"
             />
-          </div> */}
-          <div className="upload__mohead-inputDiv">
-            {" "}
-            <div className="upload__textarea-btnDiv">
-              <div className="upload__conver-textarea">
-                <div className="upload__lable-inputDiv">
-                  <label className="upload__label" htmlFor="name">
-                    VIDEO THUMBNAIL
-                  </label>
-                  <input
-                    className="upload__input"
-                    type="text"
-                    name="name"
-                    placeholder="name"
-                  />
-                </div>
-                <label className="upload__label" htmlFor="name">
-                  ADD A VIDEO DESCRITION
+          </div>
+          {/* <div className="form__inputDiv"> */}{" "}
+          <div className="form__publish-section">
+            <div className="form__conver-textarea">
+              <div className="form__label-inputDiv">
+                <label className="form__label" htmlFor="name">
+                  TITLE YOUR VIDEO
                 </label>
-                <div className="upload__textareaDiv">
-                  <textarea
-                    className="upload__textarea"
-                    name="message"
-                    cols="30"
-                    rows="5"
-                    placeholder="message"
-                  ></textarea>
-                </div>
+                <input
+                  className="form__input"
+                  type="text"
+                  name="name"
+                  placeholder="Add a title to your video"
+                />
               </div>
-              <div className="upload__btnDiv">
-                <Link to={"/"} className="upload__button-cancel">
-                  CANCEL
-                </Link>
-                <button className="upload__btn" type="submit">
-                  {" "}
-                  PUBLISH
-                </button>
+              <label className="form__label" htmlFor="name">
+                ADD A VIDEO DESCRITION
+              </label>
+              <div className="form__texareaDiv">
+                <textarea
+                  className="form__texArea"
+                  name="message"
+                  cols="30"
+                  rows="5"
+                  placeholder="Add a description of your video"
+                ></textarea>
+              </div>
+            </div>
+            <div className="form__btnDiv">
+              <button className="form__publish-btn" type="submit">
+                {" "}
+                <p>PUBLISH</p>
+              </button>
+              <div className="form__cancel-btn">
+                <Link to={"/"}>CANCEL</Link>
               </div>
             </div>
           </div>
+          {/* </div> */}
         </form>
       </div>
-
-      //
     );
   }
 }
