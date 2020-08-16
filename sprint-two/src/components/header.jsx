@@ -4,7 +4,6 @@ import Logo from "../assets/logo/logo-brainflix.svg";
 import Images from "../assets/images/Mohan-muruge.jpg";
 
 function Header() {
-  // render() {
   return (
     <header className="header">
       <div className="header__logoDiv">
@@ -41,7 +40,6 @@ function Header() {
       </div>
     </header>
   );
-  // }
 }
 
 export default Header;

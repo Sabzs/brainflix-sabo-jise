@@ -72,7 +72,6 @@ body {
     }
   }
 }
-
 .formDiv {
   @include desktop {
     display: flex;
@@ -80,7 +79,6 @@ body {
     width: 80%;
   }
 }
-
 .main-container {
   @include mobile {
     display: flex;
@@ -90,10 +88,13 @@ body {
   }
   @include desktop {
     display: flex;
+    flex-direction: row;
     padding-left: 8rem;
     padding-right: 8rem;
-
-    // padding-left: 12.5rem;
-    // padding-right: 12.5rem;
+  }
+}
+.videoItems {
+  @include desktop {
+    width: 40%;
   }
 }

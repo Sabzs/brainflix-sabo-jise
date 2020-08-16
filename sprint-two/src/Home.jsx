@@ -84,17 +84,19 @@ class Home extends Component {
         <div>
           <HeroVideo heroVideo={this.state.mainVideo} />
           <div className="main-container">
-            <div>
+            <div className="formDiv">
               <MainContent mainContent={this.state.mainVideo} />
-              <FormInputs className="formDiv" comments={this.state.mainVideo} />
+              <FormInputs comments={this.state.mainVideo} />
             </div>
-            <div className="video-list__headerDiv">
-              <h4 className="video-list__header">Next Video</h4>
+            <div className="videoItems">
+              <div className="video-list__headerDiv">
+                <h4 className="video-list__header">Next Video</h4>
+              </div>
+              <VideoItem
+                nextVideo={this.state.sidebarVideos}
+                mainVideo={this.state.mainVideo}
+              />
             </div>
-            <VideoItem
-              nextVideo={this.state.sidebarVideos}
-              mainVideo={this.state.mainVideo}
-            />
           </div>
         </div>
       </div>

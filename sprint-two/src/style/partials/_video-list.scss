@@ -2,10 +2,9 @@
   display: flex;
   flex-direction: column;
   @include mobile {
-    // padding-left: 1rem;
-    // padding-right: 1rem;
     &__videolist {
       display: flex;
+      margin-bottom: 1.5rem;
     }
     &__headerDiv {
       display: flex;
@@ -25,7 +24,6 @@
     &__imgDiv {
       display: flex;
       width: 50%;
-      margin-bottom: 1.5rem;
     }
     link {
       width: 100%;
@@ -60,22 +58,26 @@
     }
   }
   @include tablet {
+    &__videolist {
+      padding-right: 50%;
+    }
     &__header {
-      display: flex;
-      @include fonts(1rem, 1.5rem, none);
+      width: 50%;
     }
     &__imgDiv {
       display: flex;
-      width: 20%;
+      width: 40%;
     }
     &__video-info {
-      width: 20%;
+      width: 70%;
+      padding-right: 3%;
     }
   }
   @include desktop {
     &__videolist {
       display: flex;
-      margin-bottom: 3rem;
+      padding-right: 0;
+      margin-bottom: 1.5rem;
     }
     &__header {
       display: flex;
@@ -86,7 +88,6 @@
       width: 40%;
       margin-right: 0;
     }
-
     &__video-info {
       width: 50%;
     }

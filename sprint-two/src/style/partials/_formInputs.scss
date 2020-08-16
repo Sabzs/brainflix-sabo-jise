@@ -12,7 +12,9 @@
       width: 100%;
     }
     &__mohead {
-      padding-top: 1rem;
+      @include flex-justify(center);
+      width: 20%;
+      margin-top: 1.5rem;
       margin-right: 1rem;
     }
     &__mohead-img {
@@ -25,7 +27,7 @@
     &__textarea-btnDiv {
       display: flex;
       flex-direction: column;
-      width: 100%;
+      width: 68%;
     }
     &__label {
       display: flex;
@@ -75,7 +77,7 @@
       width: 100%;
     }
     &__mohead {
-      margin-right: 2.5rem;
+      width: 15%;
     }
     &__textarea-btnDiv {
       display: flex;
