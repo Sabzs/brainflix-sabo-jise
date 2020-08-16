@@ -42,10 +42,10 @@ class UploadPage extends React.Component {
         </header>{" "}
         <form className="form">
           <h3 className="form__upload-header">Upload Video</h3>{" "}
+          <label className="form__label" htmlFor="name">
+            VIDEO THUMBNAIL
+          </label>
           <div className="form__previewDiv">
-            <label className="form__label" htmlFor="name">
-              VIDEO THUMBNAIL
-            </label>
             <img
               className="form__previewImg"
               src={VideoPreview}
@@ -79,7 +79,7 @@ class UploadPage extends React.Component {
                 ></textarea>
               </div>
             </div>
-            <div className="form__btnDiv">
+            <div className="form__publishDiv">
               <button className="form__publish-btn" type="submit">
                 {" "}
                 <p>PUBLISH</p>

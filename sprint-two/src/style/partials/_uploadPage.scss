@@ -87,16 +87,10 @@
       align-items: center;
       height: 100%;
       width: 20%;
-      border: 1px solid crimson;
     }
-    // a {
-    //   width: 100%;
-    // }
     &__logo {
       display: flex;
-      // width: 100;
       object-fit: cover;
-      border: 1px solid green;
     }
     &__searchUpload {
       display: flex;
@@ -108,7 +102,6 @@
     &__searchDiv {
       display: flex;
       width: 100%;
-      border: 1px solid red;
     }
     &__upload-mohead {
       display: flex;
@@ -196,15 +189,15 @@
         width: 100%;
         height: 8.9375rem;
         background-color: $color-alabaster;
+        border: 1px solid $color-silver;
+        border-radius: 0.25rem;
       }
-      &__btnDiv {
+      &__publishDiv {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-top: 0;
-        margin-bottom: 0;
       }
       &__publish-btn {
         @include flex-justifyAlign(center, center);
@@ -232,17 +225,17 @@
       // display: flex;
       // flex-direction: column;
       // width: 100%;
-      // &__upload-header {
-      //   @include fonts(1.5rem, 2rem, bold);
-      //   margin-top: 1.5rem;
-      //   margin-bottom: 2rem;
-      // }
-      // &__previewDiv {
-      //   display: flex;
-      //   width: 18rem;
-      //   height: 9.5625rem;
-      //   border: 1px dashed lime;
-      // }
+      &__upload-header {
+        @include fonts(2.25rem, 2.75rem, bold);
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+      }
+      &__previewDiv {
+        display: flex;
+        margin-bottom: 2.5rem;
+        width: 21.5rem;
+        height: 11.4375rem;
+      }
       // &__previewImg {
       //   display: flex;
       //   width: 100%;
@@ -256,11 +249,15 @@
       //   width: 100%;
       //   border: 1px solid green;
       // }
-      // &__label-inputDiv {
-      //   display: flex;
-      //   flex-direction: column;
-      //   margin-bottom: 1.5rem;
-      // }
+      &__conver-textarea {
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid $color-silver;
+      }
+      &__label-inputDiv {
+        display: flex;
+        width: 100%;
+      }
       // &__label {
       //   display: flex;
       //   @include fonts(0.75rem, 1.25rem, none);
@@ -285,26 +282,19 @@
       //   width: 100%;
       //   height: 8.9375rem;
       // }
-      // &__btnDiv {
-      //   display: flex;
-      //   flex-direction: column;
-      //   justify-content: center;
-      //   align-items: center;
-      //   width: 100%;
-      //   margin-top: 0;
-      //   margin-bottom: 0;
-      // }
-      // &__publish-btn {
-      //   @include flex-justifyAlign(center, center);
-      //   @include fonts(0.75rem, 1.25rem, bold);
-      //   width: 100%;
-      //   height: 3rem;
-      //   margin-bottom: 1.5rem;
-      //   border-radius: 0.25rem;
-      //   border: none;
-      //   color: $color-white;
-      //   background-color: $secondary-color;
-      // }
+      &__publishDiv {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        padding-left: 65%;
+        margin-top: 2.5rem;
+        // margin-bottom: ;
+      }
+      &__publish-btn {
+        margin-bottom: 0;
+        margin-left: 3rem;
+      }
       // &__cancel-btn a {
       //   display: flex;
       //   color: $secondary-color;

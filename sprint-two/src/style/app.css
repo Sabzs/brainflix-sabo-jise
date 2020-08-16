@@ -521,7 +521,6 @@ body {
             align-items: center;
     height: 100%;
     width: 20%;
-    border: 1px solid crimson;
   }
   .upload__logo {
     display: -webkit-box;
@@ -529,7 +528,6 @@ body {
     display: flex;
     -o-object-fit: cover;
        object-fit: cover;
-    border: 1px solid green;
   }
   .upload__searchUpload {
     display: -webkit-box;
@@ -550,7 +548,6 @@ body {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    border: 1px solid red;
   }
   .upload__upload-mohead {
     display: -webkit-box;
@@ -691,8 +688,10 @@ body {
     width: 100%;
     height: 8.9375rem;
     background-color: #fafafa;
+    border: 1px solid #afafaf;
+    border-radius: 0.25rem;
   }
-  .upload .form__btnDiv {
+  .upload .form__publishDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -707,8 +706,6 @@ body {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
-    margin-top: 0;
-    margin-bottom: 0;
   }
   .upload .form__publish-btn {
     display: -webkit-box;
@@ -738,6 +735,58 @@ body {
     color: #0095ff;
     width: 100%;
     text-decoration: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .upload .form__upload-header {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  .upload .form__previewDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 2.5rem;
+    width: 21.5rem;
+    height: 11.4375rem;
+  }
+  .upload .form__conver-textarea {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #afafaf;
+  }
+  .upload .form__label-inputDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .upload .form__publishDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 65%;
+    margin-top: 2.5rem;
+  }
+  .upload .form__publish-btn {
+    margin-bottom: 0;
+    margin-left: 3rem;
   }
 }
 
