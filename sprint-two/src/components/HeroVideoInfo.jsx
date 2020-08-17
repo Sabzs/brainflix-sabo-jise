@@ -2,7 +2,7 @@ import React from "react";
 import Views from "../assets/icons/svg/icon-views.svg";
 import Likes from "../assets/icons/svg/icon-likes.svg";
 
-function MainContent(props) {
+function HeroVideoInfo(props) {
   const formattedTime = new Date().toLocaleDateString();
   return (
     <div className="mainContent">
@@ -49,4 +49,4 @@ function MainContent(props) {
   );
 }
 
-export default MainContent;
+export default HeroVideoInfo;
