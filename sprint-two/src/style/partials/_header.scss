@@ -7,7 +7,6 @@
       @include flex-justify(center);
       height: 3rem;
     }
-
     &__logo {
       display: flex;
     }
@@ -113,7 +112,6 @@
   }
   @include desktop {
     &__logoDiv a {
-      // @include flex-justify(center);
       height: 3rem;
     }
     &__searchUpload {

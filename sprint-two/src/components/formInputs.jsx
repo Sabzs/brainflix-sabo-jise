@@ -2,9 +2,6 @@
 import React, { Component } from "react";
 import Images from "../assets/images/Mohan-muruge.jpg";
 
-//==============================================================//
-//==============================================================//
-
 class FormInputs extends Component {
   render() {
     // function FormInputs({ handleSubmitMessage }) {
@@ -52,7 +49,7 @@ class FormInputs extends Component {
 
             <div className="form__textarea-btnDiv">
               <div className="form__conver-textarea">
-                <div className="form__lable-inputDiv">
+                <div className="form__label-inputDiv">
                   <label className="form__label" htmlFor="name">
                     JOIN THE CONVERSATION
                   </label>

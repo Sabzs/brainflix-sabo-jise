@@ -7,14 +7,10 @@ import volumeIcon from "../assets/icons/svg/icon-volume.svg";
 function NextVideo(props) {
   return (
     <section className="heroVideo">
-      {/* <div className="header"> */}
       <video
         className="heroVideo__video"
         poster={props.heroVideo.image && props.heroVideo.image}
-        // controls
       ></video>
-      {/* </div> */}
-
       <div className="heroVideo__controls">
         <div className="heroVideo__play">
           <img className="heroVideo__icon" src={playIcon} alt="Play Icons" />

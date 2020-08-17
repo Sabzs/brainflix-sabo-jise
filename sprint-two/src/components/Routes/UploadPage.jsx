@@ -42,54 +42,56 @@ class UploadPage extends React.Component {
         </header>{" "}
         <form className="form">
           <h3 className="form__upload-header">Upload Video</h3>{" "}
-          <label className="form__label" htmlFor="name">
-            VIDEO THUMBNAIL
-          </label>
-          <div className="form__previewDiv">
-            <img
-              className="form__previewImg"
-              src={VideoPreview}
-              alt="video preview"
-            />
-          </div>
-          {/* <div className="form__inputDiv"> */}{" "}
-          <div className="form__publish-section">
-            <div className="form__conver-textarea">
-              <div className="form__label-inputDiv">
-                <label className="form__label" htmlFor="name">
-                  TITLE YOUR VIDEO
-                </label>
-                <input
-                  className="form__input"
-                  type="text"
-                  name="name"
-                  placeholder="Add a title to your video"
+          <div className="form__preview-converDiv">
+            <div className="form__lable-previewDiv">
+              <label className="form__label" htmlFor="name">
+                VIDEO THUMBNAIL
+              </label>
+              <div className="form__previewDiv">
+                <img
+                  className="form__previewImg"
+                  src={VideoPreview}
+                  alt="video preview"
                 />
               </div>
-              <label className="form__label" htmlFor="name">
-                ADD A VIDEO DESCRITION
-              </label>
-              <div className="form__texareaDiv">
-                <textarea
-                  className="form__texArea"
-                  name="message"
-                  cols="30"
-                  rows="5"
-                  placeholder="Add a description of your video"
-                ></textarea>
-              </div>
-            </div>
-            <div className="form__publishDiv">
-              <button className="form__publish-btn" type="submit">
-                {" "}
-                <p>PUBLISH</p>
-              </button>
-              <div className="form__cancel-btn">
-                <Link to={"/"}>CANCEL</Link>
+            </div>{" "}
+            <div className="form__publish-section">
+              <div className="form__conver-textarea">
+                <div className="form__label-inputDiv">
+                  <label className="form__label" htmlFor="name">
+                    TITLE YOUR VIDEO
+                  </label>
+                  <input
+                    className="form__input"
+                    type="text"
+                    name="name"
+                    placeholder="Add a title to your video"
+                  />
+                </div>
+                <label className="form__label" htmlFor="name">
+                  ADD A VIDEO DESCRITION
+                </label>
+                <div className="form__texareaDiv">
+                  <textarea
+                    className="form__texArea"
+                    name="message"
+                    cols="30"
+                    rows="5"
+                    placeholder="Add a description of your video"
+                  ></textarea>
+                </div>
               </div>
             </div>
           </div>
-          {/* </div> */}
+          <div className="form__publishDiv">
+            <button className="form__publish-btn" type="submit">
+              {" "}
+              <p>PUBLISH</p>
+            </button>
+            <div className="form__cancel-btn">
+              <Link to={"/"}>CANCEL</Link>
+            </div>
+          </div>
         </form>
       </div>
     );

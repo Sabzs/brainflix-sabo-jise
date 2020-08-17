@@ -17,11 +17,12 @@ import FormInputs from "./components/formInputs";
 import Header from "./components/header";
 // import { v4 as uuidv4 } from "uuid";
 // import UploadPage from "./components/Routes/UploadPage";
-// import VideoList from "./components/VideoList";
+import VideoList from "./components/VideoList";
 import MainContent from "./components/MainContent";
 import axios from "axios";
-import VideoItem from "./components/VideoList/VideoItems";
+// import VideoList from "./components/VideoList";
 import "./style/app.css";
+import { API_KEY } from "./env/env_variables";
 
 //==============================//
 class Home extends Component {
@@ -33,9 +34,7 @@ class Home extends Component {
 
   componentDidMount() {
     axios
-      .get(
-        `https://project-2-api.herokuapp.com/videos/?api_key=618161be-ffd6-4ab6-98bd-78e453c5f0e9`
-      )
+      .get(`https://project-2-api.herokuapp.com/videos/?api_key=${API_KEY}`)
       .then((response) => {
         console.log(response.data);
         this.setState({
@@ -45,7 +44,7 @@ class Home extends Component {
 
         axios
           .get(
-            `https://project-2-api.herokuapp.com/videos/1af0jruup5gu/?api_key=618161be-ffd6-4ab6-98bd-78e453c5f0e9`
+            `https://project-2-api.herokuapp.com/videos/1af0jruup5gu/?api_key=${API_KEY}`
           )
           .then((response) => {
             // console.log(response.data);
@@ -65,7 +64,7 @@ class Home extends Component {
       let id = this.props.match.params.id;
       axios
         .get(
-          `https://project-2-api.herokuapp.com/videos/${id}?api_key=618161be-ffd6-4ab6-98bd-78e453c5f0e9`
+          `https://project-2-api.herokuapp.com/videos/${id}?api_key=${API_KEY}`
         )
         .then((response) => {
           // console.log(response.data);
@@ -92,7 +91,7 @@ class Home extends Component {
               <div className="video-list__headerDiv">
                 <h4 className="video-list__header">Next Video</h4>
               </div>
-              <VideoItem
+              <VideoList
                 nextVideo={this.state.sidebarVideos}
                 mainVideo={this.state.mainVideo}
               />

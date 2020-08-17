@@ -588,7 +588,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-left: 31.8125rem;
+    margin-left: 31rem;
+    padding-left: 0;
     width: 100%;
   }
 }
@@ -668,6 +669,7 @@ body {
     display: flex;
     width: 100%;
     height: 3rem;
+    padding-left: 1rem;
     border-radius: 0.25rem;
     border: none;
     border: 1px solid #afafaf;
@@ -690,6 +692,8 @@ body {
     background-color: #fafafa;
     border: 1px solid #afafaf;
     border-radius: 0.25rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
   }
   .upload .form__publishDiv {
     display: -webkit-box;
@@ -767,6 +771,12 @@ body {
     display: flex;
     width: 100%;
   }
+  .upload .form__texareaDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 2.5rem;
+  }
   .upload .form__publishDiv {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -787,6 +797,34 @@ body {
   .upload .form__publish-btn {
     margin-bottom: 0;
     margin-left: 3rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .upload .form__preview-converDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .upload .form__lable-previewDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: 1.5rem;
+    border-bottom: 1px solid #afafaf;
+  }
+  .upload .form__texArea {
+    height: 5.875rem;
+  }
+  .upload .form__publishDiv {
+    padding-left: 73%;
+  }
+  .upload .form__publish-btn {
+    margin-bottom: 0;
   }
 }
 
@@ -1151,6 +1189,7 @@ body {
     display: flex;
     margin-top: 2rem;
     width: 100%;
+    border: 1px solid red;
   }
   .form__mohead {
     display: -webkit-box;
@@ -1162,6 +1201,7 @@ body {
     width: 20%;
     margin-top: 1.5rem;
     margin-right: 1rem;
+    border: 1px solid green;
   }
   .form__mohead-img {
     display: -webkit-box;
@@ -1183,6 +1223,16 @@ body {
             flex-direction: column;
     width: 68%;
   }
+  .form__label-inputDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 1rem;
+  }
   .form__label {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1193,14 +1243,20 @@ body {
     color: #afafaf;
   }
   .form__input {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    padding-left: 1rem;
+    border-radius: 0.3rem;
+    border: none;
+    border: 1px solid #0095ff;
   }
   .form__textareaDiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    border: 1px solid #0095ff;
-    border-radius: 0.25rem;
     width: 100%;
   }
   .form__textarea {
@@ -1208,6 +1264,10 @@ body {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
+    padding-top: rem;
+    padding-left: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #0095ff;
   }
   .form__btnDiv {
     display: -webkit-box;
@@ -1252,9 +1312,6 @@ body {
     margin-top: 2rem;
     padding-right: 2.5rem;
     padding-bottom: 1.5rem;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     width: 100%;
   }
   .form__mohead {
@@ -1264,10 +1321,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1282,6 +1335,9 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 80%;
+  }
+  .form__label-inputDiv {
+    margin-bottom: 1.5rem;
   }
   .form__textareaDiv {
     display: -webkit-box;
@@ -1307,9 +1363,11 @@ body {
             align-items: center;
     width: 40%;
     padding-top: 1.3rem;
-    padding-left: 1rem;
+    padding-left: 60%;
+    padding-right: 3.75rem;
     margin-top: 0;
     margin-bottom: 0;
+    width: 100%;
   }
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function VideoItem({ nextVideo, mainVideo }) {
+function VideoList({ nextVideo, mainVideo }) {
   const nextVid =
     nextVideo &&
     nextVideo.map(function (video) {
@@ -33,4 +33,4 @@ function VideoItem({ nextVideo, mainVideo }) {
     });
   return <div className="video-list">{nextVid}</div>;
 }
-export default VideoItem;
+export default VideoList;
