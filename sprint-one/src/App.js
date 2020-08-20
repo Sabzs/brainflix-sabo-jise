@@ -119,7 +119,7 @@ class App extends Component {
               <Comments commentsInfo={this.state.commentsData} />
             </div>
           </div>
-          <div>
+          <div >
             <div className="video-list__headerDiv">
               <h4 className="video-list__header">Next Video</h4>
             </div>
