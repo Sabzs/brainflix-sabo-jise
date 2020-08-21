@@ -1,0 +1,95 @@
+.video-list {
+  display: flex;
+  flex-direction: column;
+  @include mobile {
+    &__videolist {
+      display: flex;
+      margin-bottom: 1.5rem;
+    }
+    &__headerDiv {
+      display: flex;
+      padding: 2.5rem 1rem 2.5rem 1rem;
+    }
+    &__header {
+      display: flex;
+      @include fonts(0.875rem, 1.375rem, none);
+      color: $color-silver;
+    }
+    display: flex;
+    &__list {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+    &__imgDiv {
+      display: flex;
+      width: 50%;
+    }
+    link {
+      width: 100%;
+      height: 100%;
+    }
+    &__img {
+      display: flex;
+      width: 7.5rem;
+      height: 4.375rem;
+      object-fit: cover;
+      border-radius: 0.25rem;
+    }
+    &__video-info {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+    &__video-info a {
+      text-decoration: none;
+    }
+    &__title {
+      display: flex;
+      @include fonts(0.8125rem, 1.125rem, bold);
+      padding-bottom: 0.5rem;
+      color: $primary-color;
+    }
+    &__channel {
+      display: flex;
+      @include fonts(0.8125rem, 1.125rem, none);
+      text-decoration: inherit;
+      color: $primary-color;
+    }
+  }
+  @include tablet {
+    &__videolist {
+      padding-right: 50%;
+    }
+    &__header {
+      width: 50%;
+    }
+    &__imgDiv {
+      display: flex;
+      width: 40%;
+    }
+    &__video-info {
+      width: 70%;
+      padding-right: 3%;
+    }
+  }
+  @include desktop {
+    &__videolist {
+      display: flex;
+      padding-right: 0;
+      margin-bottom: 1.5rem;
+    }
+    &__header {
+      display: flex;
+      @include fonts(1rem, 1.5rem, none);
+    }
+    &__imgDiv {
+      display: flex;
+      width: 40%;
+      margin-right: 0;
+    }
+    &__video-info {
+      width: 50%;
+    }
+  }
+}

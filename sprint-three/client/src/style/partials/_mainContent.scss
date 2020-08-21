@@ -1,0 +1,116 @@
+.mainContent {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    &__main-intro {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2rem;
+      border-bottom: 2px solid $color-mercury;
+    }
+    &__headerDiv {
+      display: flex;
+      margin-bottom: 1rem;
+    }
+    &__header {
+      display: flex;
+      @include fonts(1.5rem, 2rem, bold);
+    }
+    &__authorDiv {
+      display: flex;
+      align-items: center;
+    }
+    &__channel-author {
+      display: flex;
+      @include fonts(0.875rem, 1.375rem, bold);
+      margin-right: 0.5rem;
+    }
+    &__time {
+      display: flex;
+      @include fonts(0.875rem, 1.375rem, none);
+      color: $color-silver;
+    }
+    &__socials {
+      display: flex;
+      width: 100%;
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    &__iconsDiv {
+      display: flex;
+      justify-content: flex-start;
+      padding-right: 1rem;
+    }
+    &__icons {
+      display: flex;
+      margin-right: 0.5rem;
+    }
+    &__icon-count {
+      display: flex;
+      @include fonts(0.875rem, 1.375rem, none);
+      color: $color-silver;
+    }
+    &__article {
+      display: flex;
+      margin-top: 1.5rem;
+      margin-bottom: 2.5rem;
+      @include fonts(0.8125rem, 1.125rem, none);
+    }
+  }
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    &__main-intro {
+      display: flex;
+      flex-direction: column;
+      margin-top: 3rem;
+    }
+    &__header {
+      display: flex;
+      @include fonts(2.25rem, 2.75rem, bold);
+    }
+    &__author-socials {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding-bottom: 1.5rem;
+    }
+    &__authorDiv {
+      display: flex;
+      align-items: center;
+      width: 50%;
+    }
+    &__socials {
+      display: flex;
+      width: 50%;
+      padding-left: 11rem;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &__iconsDiv {
+      padding-right: 0;
+      &--pdright-tab {
+        padding-right: 1.5rem;
+      }
+    }
+    &__article {
+      display: flex;
+      margin-top: 2.5rem;
+      margin-bottom: 4rem;
+      padding-right: 12.5rem;
+      @include fonts(0.875rem, 1.375rem, none);
+    }
+  }
+  @include desktop {
+    &__iconsDiv {
+      padding-right: 0;
+      &--pdright-desk {
+        padding-left: 2rem;
+      }
+    }
+    &__article {
+      padding-right: 13.5rem;
+    }
+  }
+}

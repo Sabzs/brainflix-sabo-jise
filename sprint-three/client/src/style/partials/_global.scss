@@ -1,0 +1,101 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+p {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+body {
+  font-size: 16px;
+  font-family: "Linotype";
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.header {
+  @include mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @include desktop {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+.heroVideo {
+  @include mobile {
+    &__controls {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  @include tablet {
+    &__video {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    &__controls {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  @include desktop {
+    &__video {
+      padding-left: 12.5rem;
+      padding-right: 12.5rem;
+    }
+    &__controls {
+      padding-left: 13.5rem;
+      padding-right: 13.5rem;
+    }
+  }
+}
+.formDiv {
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-right: 1rem;
+  }
+}
+.main-container {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+.videoItems {
+  @include desktop {
+    width: 40%;
+  }
+}

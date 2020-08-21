@@ -1,0 +1,109 @@
+.heroVideo {
+  @include mobile {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    background-color: $primary-color;
+    &__video {
+      max-width: 100%;
+      object-fit: cover;
+    }
+    &__controls {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      z-index: 99;
+      bottom: 0.375rem;
+      width: 100%;
+      display: flex;
+      justify-content: none;
+    }
+    &__play {
+      display: flex;
+      width: 20%;
+      height: 2.5rem;
+      margin-right: 0.5rem;
+    }
+    &__icon {
+      padding: 0.725rem;
+      border-radius: 0.187rem;
+      height: 2.5rem;
+      width: 100%;
+      color: white;
+      background: rgba(black, 0.5);
+      border: unset;
+      box-shadow: unset;
+      &:hover,
+      &:focus,
+      &:active {
+        cursor: pointer;
+        background: rgba(black, 1);
+        outline: 0;
+      }
+    }
+    &__icon-group {
+      display: flex;
+      width: 30%;
+      height: 2.5rem;
+      margin-left: 0.5rem;
+    }
+    &__progress-bar {
+      position: relative;
+      flex-grow: 1;
+      height: 2.5rem;
+      width: 50%;
+      padding: 0.625rem;
+      border-radius: 0.187rem;
+      color: white;
+      background: rgba(black, 0.5);
+      display: flex;
+      justify-content: none;
+      align-items: center;
+    }
+    &__progress-timeline {
+      height: 0.187rem;
+      margin-right: 0.625rem;
+      background: grey;
+      flex-grow: 1;
+    }
+    &__progress-scrubber {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 50%;
+      left: 0.624rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &__progress-text {
+      display: none;
+      text-align: center;
+      @include fonts(12px, 20px, none);
+    }
+  }
+  @include tablet {
+    &__play {
+      display: flex;
+      width: 10%;
+      height: 2.5rem;
+      margin-right: 1rem;
+    }
+    &__icon {
+      padding: 0.625rem;
+    }
+    &__icon-group {
+      display: flex;
+      width: 15%;
+      height: 2.5rem;
+      margin-left: 1rem;
+    }
+    &__progress-text {
+      display: flex;
+      text-align: center;
+      margin-left: 1rem;
+      @include fonts(12px, 20px, none);
+    }
+  }
+}
