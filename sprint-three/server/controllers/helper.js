@@ -1,6 +1,5 @@
 const fs = require("fs");
-// const uuid = require("uuid/v4");
-
+const { v4: uuidv4 } = require('uuid');
 
 
 
@@ -12,12 +11,18 @@ function loadVideoData(callback) {
     });
 }
 
-// const getNewId = () => {
-//     return uuid();
-// };
+const getNewId = () => {
+    return uuidv4();
+};
+
+const request = (req, res, next) => {
+    console.log(`${req.protocol}://${req.get("host")}${req.originalUrl}`);
+    next();
+};
 
 
 module.exports = {
     loadVideoData,
-    // getNewId
+    getNewId,
+    request
 }
