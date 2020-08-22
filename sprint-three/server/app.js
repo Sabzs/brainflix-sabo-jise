@@ -1,10 +1,10 @@
 const express = require('express');
-const apiRoutes = require('./data/videos'); // inport from apiRoutes.js
-const logger = require('./middleware/logger');
-const port = 5000;
+const app = express();
 const fs = require('fs');
 const cors = require("cors");
-const app = express();
+require('dotenv').config();
+const { PORT, BACKEND_URL } = process.env;
+const apiRoutes = require('./model/videos');
 
 
 //body parser - helps when try to post a video with req.body Object//
@@ -12,11 +12,8 @@ app.use(express.json());
 
 app.use(cors());
 
-app.use(logger);
 
-app.use("/videos", require("./data/videos")); //this line of code is commented to line #3
+app.use("/videos", require("./model/videos"));
 
 
-app.listen(port, () => {
-    console.log(`port running at http://localhost:${port}`)
-});
+app.listen(PORT, () => console.log(`listening at: ${BACKEND_URL}:${PORT}`));

@@ -1,5 +1,5 @@
 const fs = require("fs");
-const uuid = require("uuid/v4");
+// const uuid = require("uuid/v4");
 
 
 
@@ -12,12 +12,12 @@ function loadVideoData(callback) {
     });
 }
 
-const getNewId = () => {
-    return uuid();
-};
+// const getNewId = () => {
+//     return uuid();
+// };
 
 
 module.exports = {
     loadVideoData,
-    getNewId
+    // getNewId
 }
