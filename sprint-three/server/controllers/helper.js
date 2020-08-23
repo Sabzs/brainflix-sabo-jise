@@ -11,18 +11,20 @@ function loadVideoData(callback) {
     });
 }
 
-const getNewId = () => {
-    return uuidv4();
-};
-
 const request = (req, res, next) => {
     console.log(`${req.protocol}://${req.get("host")}${req.originalUrl}`);
     next();
 };
+
+const getNewId = () => {
+    return uuidv4();
+};
+
 
 
 module.exports = {
     loadVideoData,
     getNewId,
     request
+
 }
