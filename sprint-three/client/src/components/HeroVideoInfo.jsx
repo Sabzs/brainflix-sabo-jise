@@ -41,7 +41,6 @@ function HeroVideoInfo(props) {
           </div>
         </div>
       </section>
-
       <article className="mainContent__article">
         <p>{props.mainContent && props.mainContent.description}</p>
       </article>

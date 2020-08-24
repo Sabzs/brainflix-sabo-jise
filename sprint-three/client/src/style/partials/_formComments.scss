@@ -1,8 +1,8 @@
 .comments {
   @include mobile {
     display: flex;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     border-top: 1px solid $color-mercury;
     border-bottom: 1px solid $color-mercury;
     &__circleDiv {
@@ -63,7 +63,8 @@
     }
   }
   @include desktop {
-    width: 80%;
+    width: 100%;
+    padding-right: 5rem;
     &__userComments {
       padding-right: 0;
     }

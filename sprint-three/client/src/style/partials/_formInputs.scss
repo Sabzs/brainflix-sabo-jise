@@ -47,12 +47,12 @@
       margin-bottom: 1rem;
       padding-left: 1rem;
       border-radius: 0.3rem;
-      border: none;
-      border: 1px solid $secondary-color;
     }
     &__textareaDiv {
       display: flex;
       width: 100%;
+      border: none;
+      border: 1px solid $color-silver;
     }
     &__textarea {
       display: flex;
@@ -60,7 +60,6 @@
       padding-top: rem;
       padding-left: 1rem;
       border-radius: 0.25rem;
-      border: 1px solid $secondary-color;
     }
     &__btnDiv {
       display: flex;
@@ -110,8 +109,6 @@
     }
     &__textareaDiv {
       display: flex;
-
-      border: 1px solid $secondary-color;
       border-radius: 0.25rem;
       width: 100%;
     }
