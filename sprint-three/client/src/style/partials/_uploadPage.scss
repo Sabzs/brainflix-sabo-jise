@@ -116,9 +116,6 @@
     @include desktop {
       padding-left: 8rem;
       padding-right: 8rem;
-      &__logoDiv a {
-        height: 3rem;
-      }
       &__searchUpload {
         display: flex;
         flex-direction: row;

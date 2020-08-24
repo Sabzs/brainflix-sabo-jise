@@ -570,9 +570,6 @@ body {
     padding-left: 8rem;
     padding-right: 8rem;
   }
-  .upload .header__logoDiv a {
-    height: 3rem;
-  }
   .upload .header__searchUpload {
     display: -webkit-box;
     display: -ms-flexbox;

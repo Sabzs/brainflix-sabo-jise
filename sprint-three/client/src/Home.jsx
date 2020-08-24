@@ -39,7 +39,6 @@ class Home extends Component {
   componentDidUpdate(prevProps, prevState) {
     // console.log(prevState);
     // console.log(this.props);
-
     if (
       this.props.match.params.id !== undefined &&
       this.props.match.params.id !== prevState.mainVideo.id

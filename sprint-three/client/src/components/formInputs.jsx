@@ -12,9 +12,9 @@ function FormInputs(props) {
 
   const newComments =
     props.comments.comments &&
-    props.comments.comments.map(function (comment, id) {
+    props.comments.comments.map(function (comment, index) {
       return (
-        <div className="comments" id={id}>
+        <div className="comments" key={index}>
           <div className="comments__circleDiv">
             <div className="comments__greyCircle"></div>
           </div>
