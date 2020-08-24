@@ -45,9 +45,6 @@ router.get("/", (req, res) => {
     });
 });
 
-/*
-*
-*/
 //...getting videos by ID using url params :id //
 router.get("/:id", (req, res) => {
     const vidId = req.params.id;
@@ -63,8 +60,6 @@ router.get("/:id", (req, res) => {
 });
 
 
-//==================================================================//
-//==================================================================//
 //post 
 router.post("/", (req, res) => {
     const newVideo = {
@@ -75,7 +70,7 @@ router.post("/", (req, res) => {
         image: req.body.image,
         views: 55066,
         likes: 60775,
-        timestamp: helper.timestamp(),
+        timestamp: helper.Date.now(),
         comments: []
     }
     if (!newVideo.title || !newVideo.description) {

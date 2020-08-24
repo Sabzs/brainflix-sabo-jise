@@ -62,7 +62,7 @@ class UploadPage extends React.Component {
                     TITLE YOUR VIDEO
                   </label>
                   <input
-                    className="form__input"
+                    className="form__input-text"
                     type="text"
                     name="name"
                     placeholder="Add a title to your video"

@@ -9,7 +9,7 @@ function writeJSONFile(filename, content) {
 }
 
 function loadVideoData(callback) {
-    fs.readFile('./data/videos.json', (err, data) => {
+    fs.readFile("./model/videos.json", (err, data) => {
         if (err) throw err;
         const videos = JSON.parse(data);
         callback(videos);
@@ -20,7 +20,6 @@ function loadVideoData(callback) {
 //     const videoFile = JSON.parse(fs.readFileSync("./model/videos.json"))
 //     callback(videoFile);
 // }
-
 
 const timestamp = () => {
     return Date.now();
@@ -33,7 +32,6 @@ const getNewId = () => {
 module.exports = {
     loadVideoData,
     getNewId,
-    // request,
     timestamp,
-    // writeJSONFile
+    writeJSONFile
 }

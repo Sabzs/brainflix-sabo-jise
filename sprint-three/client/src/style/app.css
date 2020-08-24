@@ -652,7 +652,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
   }
   .upload .form__label {
     display: -webkit-box;
@@ -663,7 +663,7 @@ body {
     font-weight: none;
     color: #afafaf;
   }
-  .upload .form__input {
+  .upload .form__input-text {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -769,6 +769,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding-bottom: 1.5rem;
     width: 100%;
   }
   .upload .form__texareaDiv {
@@ -805,6 +806,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    border-bottom: 1px solid #afafaf;
   }
   .upload .form__lable-previewDiv {
     display: -webkit-box;
@@ -814,8 +816,10 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-right: 1.5rem;
-    border-bottom: 1px solid #afafaf;
+    padding-right: 1.5rem;
+  }
+  .upload .form__conver-textarea {
+    border-bottom: none;
   }
   .upload .form__texArea {
     height: 5.875rem;
