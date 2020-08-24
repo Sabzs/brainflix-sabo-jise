@@ -119,7 +119,14 @@
       flex-direction: row;
       align-items: center;
       margin-left: 31.8125rem;
-      width: 100%;
+    }
+    &__btnDiv {
+      width: 60%;
+      margin-right: 0;
+    }
+    &__upload-mohead {
+      justify-content: space-between;
+      width: 70%;
     }
   }
 }

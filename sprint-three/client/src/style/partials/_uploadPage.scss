@@ -1,137 +1,152 @@
 .upload {
-  @include mobile {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    &__headerDiv {
-      display: flex;
-      flex-direction: column;
-      border-bottom: 1px solid $color-silver;
-    }
-    &__logoDiv {
-      @include flex-justify(center);
-      align-items: center;
-      height: 3rem;
-      width: 100%;
-    }
-    &__logo {
-      display: flex;
-      object-fit: cover;
-    }
-    &__searchUpload {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-    &__searchDiv {
-      display: flex;
-      width: 100%;
-    }
-    &__searchInput {
-      display: flex;
-      @include fonts(0.75rem, 1.25rem, none);
+  .header {
+    @include mobile {
       padding-left: 1rem;
+      padding-right: 1rem;
+      @include flex-justifyDirection(center, column);
       width: 100%;
-      height: 3rem;
-      border-radius: 0.25rem;
-      border: none;
-      border: 1px solid $color-silver;
-      background-color: $color-alabaster;
+      height: 10.5625rem;
+      &__logoDiv a {
+        @include flex-justify(center);
+        height: 3rem;
+      }
+      &__logo {
+        display: flex;
+      }
+      &__searchUpload {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      &__searchDiv {
+        display: flex;
+        width: 100%;
+      }
+      &__searchInput {
+        display: flex;
+        @include fonts(0.75rem, 1.25rem, none);
+        padding-left: 1rem;
+        width: 100%;
+        height: 3rem;
+        border-radius: 0.25rem;
+        border: none;
+        border: 1px solid $color-silver;
+      }
+      &__upload-mohead {
+        display: flex;
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      &__btnDiv {
+        display: flex;
+        width: 90%;
+        margin-right: 1rem;
+      }
+      &__btnDiv a {
+        text-decoration: none;
+      }
+      a {
+        width: 100%;
+      }
+      &__btn {
+        @include flex-justifyAlign(center, center);
+        @include fonts(0.75rem, 1.25rem, bold);
+        width: 100%;
+        height: 3rem;
+        border-radius: 0.25rem;
+        border: none;
+        color: $color-white;
+        background-color: $secondary-color;
+      }
+      &__moheadDiv {
+        display: flex;
+        justify-content: center;
+        width: 20%;
+      }
+      &__mohead-img {
+        display: flex;
+        width: 3rem;
+        height: 3rem;
+        object-fit: cover;
+        border-radius: 50%;
+      }
     }
-    &__upload-mohead {
-      display: flex;
+    @include tablet {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      @include flex-justifyDirection(center, row);
+      align-items: center;
       width: 100%;
-      margin-top: 0.5rem;
-      margin-bottom: 1rem;
+      height: 5rem;
+      &__logoDiv {
+        width: 30%;
+      }
+      &__logo {
+        display: flex;
+        width: 100%;
+      }
+      &__searchUpload {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 10.5625rem;
+        width: 100%;
+      }
+      &__upload-mohead {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin: 0px 0px 0px 1.5rem;
+      }
+      &__btnDiv {
+        display: flex;
+        width: 60%;
+        margin-right: 1.5rem;
+      }
+      &__moheadDiv {
+        width: 30%;
+      }
+      &__mohead-img {
+        display: flex;
+        width: 3rem;
+        height: 3rem;
+        object-fit: cover;
+        border-radius: 50%;
+      }
     }
-    &__btnDiv {
-      display: flex;
-      width: 80%;
-      margin-right: 1rem;
-    }
-    &__btn {
-      @include flex-justifyAlign(center, center);
-      @include fonts(0.75rem, 1.25rem, bold);
-      width: 100%;
-      height: 3rem;
-      border-radius: 0.25rem;
-      border: none;
-      color: $color-white;
-      background-color: $secondary-color;
-    }
-    &__moheadDiv {
-      display: flex;
-      margin-right: 1.25rem;
-      margin: 0;
-    }
-    &__mohead-img {
-      display: flex;
-      width: 3rem;
-      height: 3rem;
-      object-fit: cover;
-      border-radius: 50%;
+    @include desktop {
+      padding-left: 8rem;
+      padding-right: 8rem;
+      &__logoDiv a {
+        height: 3rem;
+      }
+      &__searchUpload {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 31.8125rem;
+      }
+      &__searchDiv {
+        display: flex;
+        width: 100%;
+      }
+      &__btnDiv {
+        width: 60%;
+        margin-right: 0;
+      }
+      &__upload-mohead {
+        justify-content: space-between;
+        width: 70%;
+      }
     }
   }
-  @include tablet {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    &__headerDiv {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding-top: 2%;
-      padding-bottom: 2%;
-      width: 100%;
-    }
-    &__logoDiv {
-      @include flex-justify(center);
-      align-items: center;
-      height: 100%;
-      width: 20%;
-    }
-    &__logo {
-      display: flex;
-      object-fit: cover;
-    }
-    &__searchUpload {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding-left: 10.5625rem;
-      width: 100%;
-    }
-    &__searchDiv {
-      display: flex;
-      width: 100%;
-    }
-    &__upload-mohead {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-left: 1.5rem;
-      margin-top: 0;
-      margin-bottom: 0;
-      width: 70%;
-    }
-    &__btnDiv {
-      display: flex;
-      width: 60%;
-    }
-  }
-  @include desktop {
-    padding-left: 12.5rem;
-    padding-right: 12.5rem;
-    &__searchUpload {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-left: 31rem;
-      padding-left: 0;
-      width: 100%;
-    }
-  }
+
   //form section//==================//
   .form {
     @include mobile {
+      padding-left: 1rem;
+      padding-right: 1rem;
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -222,6 +237,8 @@
       }
     }
     @include tablet {
+      padding-left: 1rem;
+      padding-right: 1rem;
       &__upload-header {
         @include fonts(2.25rem, 2.75rem, bold);
         margin-top: 3rem;
@@ -261,6 +278,8 @@
       }
     }
     @include desktop {
+      padding-left: 8rem;
+      padding-right: 8rem;
       &__preview-converDiv {
         display: flex;
         border-bottom: 1px solid $color-silver;
