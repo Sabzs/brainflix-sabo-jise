@@ -58,19 +58,6 @@ class Home extends Component {
     }
   }
 
-  // handleSubmitMessage = (event) => {
-  //   event.preventDefault();
-
-  //   const name = event.target.name.value;
-  //   const comment = event.target.message.value;
-  //   const timestamp = Date.now();
-
-  //   this.setState({
-  //     mainVideo: [...this.state.mainVideo, { name, comment, timestamp }],
-  //   });
-  //   event.target.reset();
-  // };
-
   render() {
     return (
       <div>

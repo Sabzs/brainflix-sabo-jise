@@ -1,10 +1,49 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo/logo-brainflix.svg";
 import Images from "../../assets/images/Mohan-muruge.jpg";
 import VideoPreview from "../../assets/images/video-preview.jpg";
+import axios from "axios";
 
-class UploadPage extends React.Component {
+class UploadPage extends Component {
+  state = {
+    name: "",
+    message: "",
+  };
+
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
+  };
+  componentDidMount() {
+    axios.get("http://localhost:5000/videos").then((res) => {
+      this.setState({
+        videos: res.data,
+      });
+    });
+  }
+  handleSubmit = (event) => {
+    event.preventDefault();
+
+    axios
+      .post("http://localhost:5000/videos", {
+        name: this.state.name,
+        message: this.state.message,
+        image: "https://i.imgur.com/5qyCZrD.jpg",
+      })
+      .then((res) => {
+        this.setState({
+          videos: res.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    event.target.reset();
+  };
+
   render() {
     return (
       <div className="upload">
@@ -42,7 +81,7 @@ class UploadPage extends React.Component {
             </div>
           </div>
         </header>{" "}
-        <form className="form">
+        <form className="form" onSubmit={this.handleSubmit}>
           <h3 className="form__upload-header">Upload Video</h3>{" "}
           <div className="form__preview-converDiv">
             <div className="form__lable-previewDiv">
@@ -68,6 +107,8 @@ class UploadPage extends React.Component {
                     type="text"
                     name="name"
                     placeholder="Add a title to your video"
+                    value={this.state.name}
+                    onChange={this.handleChange}
                   />
                 </div>
                 <label className="form__label" htmlFor="name">
@@ -80,13 +121,16 @@ class UploadPage extends React.Component {
                     cols="30"
                     rows="5"
                     placeholder="Add a description of your video"
+                    type="text"
+                    value={this.state.message}
+                    onChange={this.handleChange}
                   ></textarea>
                 </div>
               </div>
             </div>
           </div>
           <div className="form__publishDiv">
-            <button className="form__publish-btn" type="submit">
+            <button className="form__publish-btn" type="submit" value="submit">
               {" "}
               <p>PUBLISH</p>
             </button>

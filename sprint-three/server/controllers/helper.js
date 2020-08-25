@@ -16,11 +16,6 @@ function loadVideoData(callback) {
     });
 }
 
-// function loadVideoData(callback) {
-//     const videoFile = JSON.parse(fs.readFileSync("./model/videos.json"))
-//     callback(videoFile);
-// }
-
 const timestamp = () => {
     return Date.now();
 };

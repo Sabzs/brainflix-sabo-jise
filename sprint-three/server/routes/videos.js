@@ -7,30 +7,7 @@ const { loadVideoData } = require("../controllers/helper");
 
 
 
-// router.get("/", (req, res) => {
-//     const videoList = videos.map(video => {
-//         return {
-//             id: video.id,
-//             title: video.title,
-//             channel: video.channel,
-//             image: video.image,
-//         }
-//     })
-//     res.json(videoList);
-// })
-
-// router.get("/:id", (req, res) => {
-//     const found = videos.some(video => video.id === req.params.id);
-//     if (found) {
-//         res.json(video.filter(video => video.id === req.params.id));
-//     } else {
-//         res.status(400)
-//             .json({ errMessage: `Video with ID: ${req.params.id} not found` });
-//     }
-// })
-//==================================================================//
-
-//get all videos from video.json and map through to create an array of objects for sideBarVideos  //
+//get all videos from video.json //
 router.get("/", (req, res) => {
     loadVideoData((videos) => {
         const sideBarVideos = videos.map((video) => {
@@ -51,7 +28,6 @@ router.get("/:id", (req, res) => {
     loadVideoData((videos) => {
         const vidIndex = videos.findIndex((vidObj) => vidObj.id === vidId);
         if (vidIndex !== -1) {
-            //return a single video if id matches
             res.json(videos[vidIndex]);
         } else {
             res.status(404).json({ message: `Video with id ${vidId} not found` });
@@ -59,9 +35,9 @@ router.get("/:id", (req, res) => {
     });
 });
 
-
 //post 
 router.post("/", (req, res) => {
+    console.log("post route")
     const newVideo = {
         id: helper.getNewId(),
         title: req.body.title,
@@ -78,6 +54,7 @@ router.post("/", (req, res) => {
             erroMessage: "Please provide title and description"
         })
     }
+    console.log(videos)
     videos.push(newVideo);
     helper.writeJSONFile(videosData, videos)
     res.json(newVideo.id);
