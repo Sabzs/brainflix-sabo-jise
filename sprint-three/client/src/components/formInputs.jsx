@@ -2,8 +2,6 @@ import React from "react";
 import Images from "../assets/images/Mohan-muruge.jpg";
 
 function FormInputs(props) {
-  // event.preventDefault();
-
   let timeStamp = props.comments.timestamp;
   var toDate = new Date(timeStamp).getDate();
   var toMonth = new Date(timeStamp).getMonth() + 1;
