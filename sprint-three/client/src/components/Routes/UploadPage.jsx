@@ -7,8 +7,8 @@ import axios from "axios";
 
 class UploadPage extends Component {
   state = {
-    name: "",
-    message: "",
+    title: "",
+    descirption: "",
   };
 
   handleChange = (event) => {
@@ -16,23 +16,19 @@ class UploadPage extends Component {
       [event.target.name]: event.target.value,
     });
   };
-  componentDidMount() {
-    axios.get("http://localhost:5000/videos").then((res) => {
-      this.setState({
-        videos: res.data,
-      });
-    });
-  }
+
   handleSubmit = (event) => {
     event.preventDefault();
+    const { title, description } = event.target;
 
     axios
       .post("http://localhost:5000/videos", {
-        name: this.state.name,
-        message: this.state.message,
+        title: title.value,
+        description: description.value,
         image: "https://i.imgur.com/5qyCZrD.jpg",
       })
       .then((res) => {
+        console.log(res);
         this.setState({
           videos: res.data,
         });
@@ -105,7 +101,7 @@ class UploadPage extends Component {
                   <input
                     className="form__input-text"
                     type="text"
-                    name="name"
+                    name="title"
                     placeholder="Add a title to your video"
                     value={this.state.name}
                     onChange={this.handleChange}
@@ -117,7 +113,7 @@ class UploadPage extends Component {
                 <div className="form__texareaDiv">
                   <textarea
                     className="form__texArea"
-                    name="message"
+                    name="description"
                     cols="30"
                     rows="5"
                     placeholder="Add a description of your video"

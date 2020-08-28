@@ -46,7 +46,7 @@ router.post("/", (req, res) => {
         image: req.body.image,
         views: 55066,
         likes: 60775,
-        timestamp: helper.Date.now(),
+        timestamp: helper.timestamp(),
         comments: []
     }
     if (!newVideo.title || !newVideo.description) {
