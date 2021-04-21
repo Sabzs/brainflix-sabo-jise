@@ -2,35 +2,34 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function VideoList({ nextVideo, mainVideo }) {
-  const nextVid =
-    nextVideo &&
-    nextVideo.map(function (video) {
-      return (
-        <div className="video-list__videolist" key={video.id}>
-          {video.id !== mainVideo ? (
-            <div className="video-list__list">
+  return (
+    <div className="video-list__videolist">
+      <div className="video-list__headerDiv">
+        <h4 className="video-list__header">Next Video</h4>
+      </div>
+      {nextVideo
+        .filter((video) => {
+          return mainVideo.id !== video.id;
+        })
+        .map((video) => {
+          return (
+            <Link
+              className="video-list__list"
+              key={video.id}
+              to={`/video/${video.id}`}
+            >
               <div className="video-list__imgDiv">
-                <Link to={`/video/${video.id}`}>
-                  <img
-                    className="video-list__img"
-                    src={video.image}
-                    alt="Images"
-                  />
-                </Link>
+                <img src={video.image} alt="main video" />
               </div>
               <div className="video-list__video-info">
-                <Link to={`/video/${video.id}`}>
-                  <p className="video-list__title">{video.title}</p>
-                  <p className="video-list__channel">{video.channel}</p>
-                </Link>
+                <p className="video-list__title">{video.title}</p>
+                <p className="video-list__channel">{video.channel}</p>
               </div>
-            </div>
-          ) : (
-            <div className="hide" key={video.id}></div>
-          )}
-        </div>
-      );
-    });
-  return <div className="video-list">{nextVid}</div>;
+            </Link>
+          );
+        })}
+    </div>
+  );
 }
+
 export default VideoList;
