@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import './index.css';
 import Home from './Home';
-import UploadPage from './components/Routes/UploadPage';
-import NotFound from './components/Routes/NotFound';
+import UploadPage from './components/UploadPage';
+import NotFound from './components/NotFound';
 
 
 ReactDOM.render(
