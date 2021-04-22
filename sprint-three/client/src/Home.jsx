@@ -7,6 +7,11 @@ import HeroVideoInfo from "./components/HeroVideoInfo";
 import axios from "axios";
 import "./style/app.css";
 
+const API_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://brainflix-sabzs.herokuapp.com"
+    : "http://localhost:8080";
+
 class Home extends Component {
   state = {
     sideVideos: [],
@@ -15,19 +20,14 @@ class Home extends Component {
   };
 
   componentDidMount() {
-    axios
-      .get("http://localhost:8080/videos/sidevideos")
-      .then(async (response) => {
-        this.setState({
-          sideVideos: response.data,
-        });
-        const homeObject = await axios.get(
-          // "http://localhost:8080/videos/sidevideos/1af0jruup5gu"
-          `https://project-2-api.herokuapp.com/videos/1af0jruup5gu/?api_key=${process.env.API_KEY}`
-        );
-        console.log(homeObject.data);
-        this.setState({ mainVideo: homeObject.data });
+    axios.get(`${API_URL}/videos/sidevideos`).then(async (response) => {
+      this.setState({
+        sideVideos: response.data,
       });
+      const homeObject = await axios.get(`${API_URL}/videos/sidevideos`);
+      console.log(homeObject.data);
+      this.setState({ mainVideo: homeObject.data[0] });
+    });
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -36,14 +36,12 @@ class Home extends Component {
       this.props.match.params.id !== prevState.mainVideo.id
     ) {
       let id = this.props.match.params.id;
-      axios
-        .get(`http://localhost:8080/videos/mainvideo/${id}`)
-        .then((response) => {
-          this.setState({
-            mainVideo: response.data,
-            videoId: response.data.id,
-          });
+      axios.get(`${API_URL}/videos/mainvideo/${id}`).then((response) => {
+        this.setState({
+          mainVideo: response.data,
+          videoId: response.data.id,
         });
+      });
     }
   }
 
