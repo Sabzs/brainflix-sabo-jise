@@ -1,13 +1,31 @@
 .heroVideo {
   @include mobile {
     display: flex;
-    position: relative;
     width: 100%;
+    height: auto;
     margin: 0;
     background-color: $primary-color;
-    &__video {
-      max-width: 100%;
-      object-fit: cover;
+    position: relative;
+
+    &__hero-video-wrapper {
+      display: flex;
+      width: 100%;
+      // height: 50%;
+      position: relative;
+      padding-top: 56.25%;
+      margin: 0;
+      background-color: $primary-color;
+      img {
+        display: flex;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
     &__controls {
       display: flex;
@@ -16,21 +34,20 @@
       z-index: 99;
       bottom: 0.375rem;
       width: 100%;
-      display: flex;
-      justify-content: none;
+      height: 2rem;
     }
     &__play {
       display: flex;
       width: 20%;
-      height: 2.5rem;
+      height: 100%;
       margin-right: 0.5rem;
     }
     &__icon {
-      padding: 0.725rem;
+      padding: 0.425rem;
       border-radius: 0.187rem;
-      height: 2.5rem;
+      height: 100%;
       width: 100%;
-      color: white;
+      color: #fff;
       background: rgba(black, 0.5);
       border: unset;
       box-shadow: unset;
@@ -45,13 +62,13 @@
     &__icon-group {
       display: flex;
       width: 30%;
-      height: 2.5rem;
+      height: 100%;
       margin-left: 0.5rem;
     }
     &__progress-bar {
       position: relative;
       flex-grow: 1;
-      height: 2.5rem;
+      height: 100%;
       width: 50%;
       padding: 0.625rem;
       border-radius: 0.187rem;
@@ -84,26 +101,50 @@
     }
   }
   @include tablet {
-    &__play {
-      display: flex;
-      width: 10%;
-      height: 2.5rem;
-      margin-right: 1rem;
+    &__hero-video-wrapper {
+      img {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+    &__controls {
+      height: 3.1rem;
     }
     &__icon {
-      padding: 0.625rem;
+      padding: 0.535rem;
     }
-    &__icon-group {
-      display: flex;
-      width: 15%;
-      height: 2.5rem;
-      margin-left: 1rem;
+    @include laptop {
+      &__hero-video-wrapper {
+        img {
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
+        }
+      }
+      &__controls {
+        height: 3.3rem;
+        padding-left: 4.5rem;
+        padding-right: 4.5rem;
+      }
+      &__icon {
+        padding: 0.765rem;
+      }
     }
-    &__progress-text {
-      display: flex;
-      text-align: center;
-      margin-left: 1rem;
-      @include fonts(12px, 20px, none);
+    @include desktop {
+      &__hero-video-wrapper {
+        padding-top: 50.25%;
+        img {
+          padding-left: 12rem;
+          padding-right: 12rem;
+        }
+      }
+      &__controls {
+        height: 3.5rem;
+        padding-left: 14.5rem;
+        padding-right: 14.5rem;
+      }
+      &__icon {
+        padding: 0.635rem;
+      }
     }
   }
 }
