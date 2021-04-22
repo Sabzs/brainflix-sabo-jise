@@ -28,7 +28,7 @@ function FormInputs(props) {
     });
 
   return (
-    <div>
+    <>
       <form className="form">
         <h3 className="form__threeComments">3 Comments</h3>
 
@@ -74,9 +74,8 @@ function FormInputs(props) {
         </div>
       </form>
       {newComments}
-    </div>
+    </>
   );
-  // }
 }
 
 export default FormInputs;

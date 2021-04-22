@@ -47,19 +47,31 @@
       margin-bottom: 1rem;
       padding-left: 1rem;
       border-radius: 0.3rem;
+      border: 1px solid $color-silver;
+      &:focus {
+        border: none;
+        border-radius: 0.3rem;
+      }
     }
     &__textareaDiv {
       display: flex;
       width: 100%;
-      border: none;
       border: 1px solid $color-silver;
+      border: 0.3rem;
     }
     &__textarea {
       display: flex;
       width: 100%;
       padding-top: rem;
       padding-left: 1rem;
-      border-radius: 0.25rem;
+      border-radius: 0.3rem;
+      border: none;
+      border: 1px solid $color-silver;
+
+      &:focus {
+        border: none;
+        border-radius: 0.3rem;
+      }
     }
     &__btnDiv {
       display: flex;
@@ -122,7 +134,6 @@
       align-items: center;
       width: 40%;
       padding-top: 1.3rem;
-      // padding-left: 60%;
       margin-top: 0;
       margin-bottom: 0;
       width: 40%;
