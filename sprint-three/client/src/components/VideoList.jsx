@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function VideoList({ nextVideo, mainVideo }) {
   return (
-    <div className="video-list__videolist">
+    <div className="video-list">
       <div className="video-list__headerDiv">
         <h4 className="video-list__header">Next Video</h4>
       </div>
