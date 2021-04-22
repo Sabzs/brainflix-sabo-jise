@@ -8,6 +8,7 @@ import axios from "axios";
 class UploadPage extends Component {
   state = {
     title: "",
+    channel: "",
     descirption: "",
   };
 
@@ -19,13 +20,14 @@ class UploadPage extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const { title, description } = event.target;
+    const { title, channel, description } = event.target;
 
     axios
-      .post("http://localhost:5000/videos", {
+      .post("http://localhost:8080/videos", {
         title: title.value,
+        channel: channel.value,
         description: description.value,
-        image: "https://i.imgur.com/5qyCZrD.jpg",
+        image: "https://i.imgur.com/ibLw5q5.jpg",
       })
       .then((res) => {
         console.log(res);
@@ -107,6 +109,20 @@ class UploadPage extends Component {
                     onChange={this.handleChange}
                   />
                 </div>
+                <div className="form__label-inputDiv">
+                  <label className="form__label" htmlFor="name">
+                    CHANNEL NAME
+                  </label>
+                  <input
+                    className="form__input-text"
+                    type="text"
+                    name="channel"
+                    placeholder="Your channel name"
+                    value={this.state.name}
+                    onChange={this.handleChange}
+                  />
+                </div>
+
                 <label className="form__label" htmlFor="name">
                   ADD A VIDEO DESCRITION
                 </label>
