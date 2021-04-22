@@ -61,6 +61,7 @@ body {
       padding-right: 2rem;
     }
   }
+
   @include desktop {
     &__video {
       padding-left: 12.5rem;
@@ -72,14 +73,7 @@ body {
     }
   }
 }
-.formDiv {
-  @include desktop {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    border-right: 2px solid $color-silver;
-  }
-}
+
 .main-container {
   @include mobile {
     display: flex;
@@ -92,10 +86,12 @@ body {
     flex-direction: row;
     padding-left: 8rem;
     padding-right: 8rem;
-  }
-}
-.videoItems {
-  @include desktop {
-    width: 40%;
+
+    .formDiv {
+      width: 70%;
+    }
+    .video-list {
+      width: 30%;
+    }
   }
 }
