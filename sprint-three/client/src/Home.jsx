@@ -6,7 +6,6 @@ import VideoList from "./components/VideoList";
 import HeroVideoInfo from "./components/HeroVideoInfo";
 import axios from "axios";
 import "./style/app.css";
-import { API_KEY } from "./env/env_variables";
 
 class Home extends Component {
   state = {
@@ -24,7 +23,7 @@ class Home extends Component {
         });
         const homeObject = await axios.get(
           // "http://localhost:8080/videos/sidevideos/1af0jruup5gu"
-          `https://project-2-api.herokuapp.com/videos/1af0jruup5gu/?api_key=${API_KEY}`
+          `https://project-2-api.herokuapp.com/videos/1af0jruup5gu/?api_key=${process.env.API_KEY}`
         );
         console.log(homeObject.data);
         this.setState({ mainVideo: homeObject.data });
