@@ -1,4 +1,5 @@
 {
+  "proxy": "https://brainflix-sabzs.herokuapp.com:8080",
   "name": "sprint-3",
   "version": "0.1.0",
   "private": true,
