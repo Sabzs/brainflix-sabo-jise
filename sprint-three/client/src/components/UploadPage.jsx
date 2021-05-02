@@ -144,7 +144,7 @@ class UploadPage extends Component {
           <div className="form__publishDiv">
             <button className="form__publish-btn" type="submit" value="submit">
               {" "}
-              <p>PUBLISH</p>
+              PUBLISH
             </button>
             <div className="form__cancel-btn">
               <Link to={"/"}>CANCEL</Link>

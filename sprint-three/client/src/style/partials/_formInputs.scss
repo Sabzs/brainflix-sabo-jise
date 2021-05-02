@@ -88,6 +88,10 @@
       border: none;
       color: $color-white;
       background-color: $secondary-color;
+      &:hover {
+        cursor: pointer;
+        background-color: $color-hover;
+      }
     }
   }
   @include tablet {

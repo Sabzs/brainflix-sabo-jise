@@ -252,6 +252,10 @@ body {
     color: #ffffff;
     background-color: #0095ff;
   }
+  .header__btn:hover {
+    cursor: pointer;
+    background-color: #004892;
+  }
   .header__moheadDiv {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -511,6 +515,10 @@ body {
     border: none;
     color: #ffffff;
     background-color: #0095ff;
+  }
+  .upload .header__btn:hover {
+    cursor: pointer;
+    background-color: #004892;
   }
   .upload .header__moheadDiv {
     display: -webkit-box;
@@ -778,13 +786,31 @@ body {
     color: #ffffff;
     background-color: #0095ff;
   }
-  .upload .form__cancel-btn a {
+  .upload .form__publish-btn:hover {
+    cursor: pointer;
+    background-color: #004892;
+  }
+  .upload .form__cancel-btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     color: #0095ff;
     width: 100%;
+  }
+  .upload .form__cancel-btn a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    color: #0095ff;
     text-decoration: none;
+  }
+  .upload .form__cancel-btn a:hover {
+    cursor: pointer;
+    color: #004892;
   }
 }
 
@@ -847,7 +873,6 @@ body {
   }
   .upload .form__publish-btn {
     margin-bottom: 0;
-    margin-left: 3rem;
   }
 }
 
@@ -1395,6 +1420,10 @@ body {
     border: none;
     color: #ffffff;
     background-color: #0095ff;
+  }
+  .form__btn:hover {
+    cursor: pointer;
+    background-color: #004892;
   }
 }
 
