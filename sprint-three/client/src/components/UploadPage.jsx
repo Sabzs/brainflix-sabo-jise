@@ -105,7 +105,7 @@ class UploadPage extends Component {
                     type="text"
                     name="title"
                     placeholder="Add a title to your video"
-                    value={this.state.name}
+                    value={this.state.title}
                     onChange={this.handleChange}
                   />
                 </div>
@@ -118,7 +118,7 @@ class UploadPage extends Component {
                     type="text"
                     name="channel"
                     placeholder="Your channel name"
-                    value={this.state.name}
+                    value={this.state.channel}
                     onChange={this.handleChange}
                   />
                 </div>
@@ -134,7 +134,7 @@ class UploadPage extends Component {
                     rows="5"
                     placeholder="Add a description of your video"
                     type="text"
-                    value={this.state.message}
+                    value={this.state.description}
                     onChange={this.handleChange}
                   ></textarea>
                 </div>
