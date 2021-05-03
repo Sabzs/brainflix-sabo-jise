@@ -5,6 +5,11 @@ import Images from "../assets/images/Mohan-muruge.jpg";
 import VideoPreview from "../assets/images/video-preview.jpg";
 import axios from "axios";
 
+const API_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://brainflix-sabzs.herokuapp.com"
+    : "http://localhost:8080";
+
 class UploadPage extends Component {
   state = {
     title: "",
@@ -23,7 +28,7 @@ class UploadPage extends Component {
     const { title, channel, description } = event.target;
 
     axios
-      .post("http://localhost:8080/videos", {
+      .post(`${API_URL}/videos`, {
         title: title.value,
         channel: channel.value,
         description: description.value,
@@ -38,7 +43,6 @@ class UploadPage extends Component {
       .catch((err) => {
         console.log(err);
       });
-
     event.target.reset();
   };
 

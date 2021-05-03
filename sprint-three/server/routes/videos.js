@@ -47,7 +47,6 @@ router.get("/mainvideo/:id", (req, res) => {
 
 //post video==//
 router.post("/", (req, res) => {
-  console.log("post route")
   const newVideo = {
     id: helper.getNewId(),
     title: req.body.title,
@@ -69,6 +68,10 @@ router.post("/", (req, res) => {
   helper.writeJSONFile(videosData, videos)
   res.json(newVideo.id);
 });
+
+
+
+
 
 
 module.exports = router;
