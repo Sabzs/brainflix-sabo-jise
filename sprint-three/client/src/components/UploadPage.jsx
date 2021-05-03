@@ -43,7 +43,7 @@ class UploadPage extends Component {
       .catch((err) => {
         console.log(err);
       });
-    event.target.reset();
+    this.setState({ title: "", channel: "", description: "" });
   };
 
   render() {
