@@ -1,34 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import Images from "../assets/images/Mohan-muruge.jpg";
 
-function FormInputs(props) {
-  let timeStamp = props.comments.timestamp;
-  var toDate = new Date(timeStamp).getDate();
-  var toMonth = new Date(timeStamp).getMonth() + 1;
-  var toYear = new Date(timeStamp).getFullYear();
-  var originalDate = toMonth + "/" + toDate + "/" + toYear;
-
-  const newComments =
-    props.comments.comments &&
-    props.comments.comments.map(function (comment, index) {
-      return (
-        <div className="comments" key={index}>
-          <div className="comments__circleDiv">
-            <div className="comments__greyCircle"></div>
-          </div>
-          <div className="comments__userComments">
-            <div className="comments__nameDate">
-              <p className="comments__userName">{comment.name}</p>
-              <p className="comments__userDate">{originalDate}</p>
-            </div>
-            <div className="comments__userText">{comment.comment}</div>
-          </div>
-        </div>
-      );
-    });
-
-  return (
-    <>
+export class CommentForm extends Component {
+  render() {
+    return (
       <form className="form">
         <h3 className="form__threeComments">3 Comments</h3>
 
@@ -50,17 +25,21 @@ function FormInputs(props) {
                 <input
                   className="form__input"
                   type="text"
-                  name="name"
                   placeholder="name"
+                  name="name"
+                  // value={this.state.name}
+                  // onChange={this.handleChange}
                 />
               </div>
               <div className="form__textareaDiv">
                 <textarea
                   className="form__textarea"
-                  name="message"
                   cols="30"
                   rows="5"
                   placeholder="message"
+                  name="message"
+                  // value={this.state.message}
+                  // onChange={this.handleChange}
                 ></textarea>
               </div>
             </div>
@@ -73,9 +52,8 @@ function FormInputs(props) {
           </div>
         </div>
       </form>
-      {newComments}
-    </>
-  );
+    );
+  }
 }
 
-export default FormInputs;
+export default CommentForm;

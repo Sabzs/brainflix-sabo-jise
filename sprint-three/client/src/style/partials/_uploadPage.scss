@@ -61,6 +61,10 @@
         border: none;
         color: $color-white;
         background-color: $secondary-color;
+        &:hover {
+          cursor: pointer;
+          background-color: $color-hover;
+        }
       }
       &__moheadDiv {
         display: flex;
@@ -223,13 +227,26 @@
         border: none;
         color: $color-white;
         background-color: $secondary-color;
+        &:hover {
+          cursor: pointer;
+          background-color: $color-hover;
+        }
       }
-      &__cancel-btn a {
+      &__cancel-btn {
         display: flex;
         color: $secondary-color;
-
         width: 100%;
-        text-decoration: none;
+        a {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          color: $secondary-color;
+          text-decoration: none;
+          &:hover {
+            cursor: pointer;
+            color: $color-hover;
+          }
+        }
       }
     }
     @include tablet {
@@ -270,7 +287,6 @@
       }
       &__publish-btn {
         margin-bottom: 0;
-        margin-left: 3rem;
       }
     }
     @include desktop {

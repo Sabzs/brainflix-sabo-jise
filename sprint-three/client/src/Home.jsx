@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import HeroVideo from "./components/HeroVideo";
-import FormInputs from "./components/formInputs";
 import Header from "./components/header";
 import VideoList from "./components/VideoList";
 import HeroVideoInfo from "./components/HeroVideoInfo";
+import Comments from "./components/Comments";
 import axios from "axios";
 import "./style/app.css";
 
@@ -54,7 +54,7 @@ class Home extends Component {
           <div className="main-container">
             <div className="formDiv">
               <HeroVideoInfo mainContent={this.state.mainVideo} />
-              <FormInputs comments={this.state.mainVideo} />
+              <Comments comments={this.state.mainVideo} />
             </div>
             <VideoList
               nextVideo={this.state.sideVideos}

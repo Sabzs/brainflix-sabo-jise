@@ -10,6 +10,14 @@ const { loadVideoData } = require("../middleware/helper");
 //get all videos from video.json //
 router.get("/sidevideos", (req, res) => {
   loadVideoData((videos) => {
+    res.json(videos);
+  });
+});
+
+
+//get all selected videos items from video.json //
+router.get("/selecteditems", (req, res) => {
+  loadVideoData((videos) => {
     const sideBarVideos = videos.map((sidevideo) => {
       return {
         id: sidevideo.id,
@@ -37,9 +45,8 @@ router.get("/mainvideo/:id", (req, res) => {
   });
 });
 
-//post 
+//post video==//
 router.post("/", (req, res) => {
-  console.log("post route")
   const newVideo = {
     id: helper.getNewId(),
     title: req.body.title,
@@ -83,5 +90,10 @@ router.post("/", (req, res) => {
   helper.writeJSONFile(videosData, videos)
   res.json(newVideo.id);
 });
+
+
+
+
+
 
 module.exports = router;

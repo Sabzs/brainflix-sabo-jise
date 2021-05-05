@@ -5,6 +5,11 @@ import Images from "../assets/images/Mohan-muruge.jpg";
 import VideoPreview from "../assets/images/video-preview.jpg";
 import axios from "axios";
 
+const API_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://brainflix-sabzs.herokuapp.com"
+    : "http://localhost:8080";
+
 class UploadPage extends Component {
   state = {
     title: "",
@@ -23,7 +28,7 @@ class UploadPage extends Component {
     const { title, channel, description } = event.target;
 
     axios
-      .post("http://localhost:8080/videos", {
+      .post(`${API_URL}/videos`, {
         title: title.value,
         channel: channel.value,
         description: description.value,
@@ -38,8 +43,7 @@ class UploadPage extends Component {
       .catch((err) => {
         console.log(err);
       });
-
-    event.target.reset();
+    this.setState({ title: "", channel: "", description: "" });
   };
 
   render() {
@@ -105,7 +109,7 @@ class UploadPage extends Component {
                     type="text"
                     name="title"
                     placeholder="Add a title to your video"
-                    value={this.state.name}
+                    value={this.state.title}
                     onChange={this.handleChange}
                   />
                 </div>
@@ -118,7 +122,7 @@ class UploadPage extends Component {
                     type="text"
                     name="channel"
                     placeholder="Your channel name"
-                    value={this.state.name}
+                    value={this.state.channel}
                     onChange={this.handleChange}
                   />
                 </div>
@@ -134,7 +138,7 @@ class UploadPage extends Component {
                     rows="5"
                     placeholder="Add a description of your video"
                     type="text"
-                    value={this.state.message}
+                    value={this.state.description}
                     onChange={this.handleChange}
                   ></textarea>
                 </div>
@@ -144,7 +148,7 @@ class UploadPage extends Component {
           <div className="form__publishDiv">
             <button className="form__publish-btn" type="submit" value="submit">
               {" "}
-              <p>PUBLISH</p>
+              PUBLISH
             </button>
             <div className="form__cancel-btn">
               <Link to={"/"}>CANCEL</Link>

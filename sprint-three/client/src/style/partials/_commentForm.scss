@@ -1,0 +1,146 @@
+.form {
+  // @include mobile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &__threeComments {
+    @include fonts(0.875rem, 1.375rem, bold);
+  }
+  &__mohead-inputDiv {
+    display: flex;
+    margin-top: 2rem;
+    width: 100%;
+  }
+  &__mohead {
+    @include flex-justify(center);
+    width: 20%;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+  }
+  &__mohead-img {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__textarea-btnDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 68%;
+  }
+  &__label-inputDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  &__label {
+    display: flex;
+    @include fonts(0.875rem, 1.375rem, none);
+    color: $color-silver;
+  }
+  &__input {
+    display: none;
+    // display: flex;
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid $color-silver;
+    &:focus {
+      border: none;
+      border-radius: 0.3rem;
+    }
+  }
+  &__textareaDiv {
+    display: flex;
+    width: 100%;
+    border: 1px solid $color-silver;
+    border: 0.3rem;
+  }
+  &__textarea {
+    display: flex;
+    width: 100%;
+    padding-top: rem;
+    padding-left: 1rem;
+    border-radius: 0.3rem;
+    border: none;
+    border: 1px solid $color-silver;
+
+    &:focus {
+      border: none;
+      border-radius: 0.3rem;
+    }
+  }
+  &__btnDiv {
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  &__btn {
+    @include flex-justifyAlign(center, center);
+    @include fonts(0.75rem, 1.25rem, bold);
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.25rem;
+    border: none;
+    color: $color-white;
+    background-color: $secondary-color;
+    &:hover {
+      cursor: pointer;
+      background-color: $color-hover;
+    }
+  }
+  // }
+  @include tablet {
+    &__threeComments {
+      @include fonts(1rem, 1.5rem, bold);
+    }
+    &__mohead-inputDiv {
+      display: flex;
+      margin-top: 2rem;
+      padding-right: 2.5rem;
+      padding-bottom: 1.5rem;
+      width: 100%;
+    }
+    &__mohead {
+      width: 15%;
+      margin-top: 1.5rem;
+    }
+    &__textarea-btnDiv {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+    &__conver-textarea {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin-right: 1rem;
+    }
+    &__label-inputDiv {
+      margin-bottom: 0;
+    }
+    &__textareaDiv {
+      display: flex;
+      border-radius: 0.25rem;
+      width: 100%;
+    }
+    &__textarea {
+      display: flex;
+      height: 3rem;
+      width: 100%;
+    }
+    &__btnDiv {
+      display: flex;
+      align-items: center;
+      width: 40%;
+      padding-top: 1.3rem;
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 40%;
+    }
+  }
+}
